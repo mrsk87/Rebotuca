@@ -15,14 +15,14 @@ function Dashboard() {
       const q = query(collection(db, "users"), where("uid", "==", user?.uid));
       const querySnapshot = await getDocs(q);
 
-      const data = await querySnapshot.docs[0].data();
+      const data = querySnapshot.docs[0].data();
       setName(data.name);
     } catch (err) {
       console.error(err);
       alert("An error occured while fetching user data");
     }
   };
-
+  
   useEffect(() => {
     if (loading) return;
     if (!user) return navigate("/");
