@@ -14,6 +14,7 @@ function Footer() {
       ></link>
 
       <footer className={footerCSS.footer_section}>
+        <hr />
         <div className="container">
           <div className={cx(footerCSS.footer_content, "pt-5", "pb-5")}>
             <div className="row">
