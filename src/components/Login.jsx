@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import cx from "classnames";
 import authCSS from "../css/auth.module.css";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 import { useNavigate } from "react-router-dom";
@@ -23,10 +24,11 @@ function Login() {
 
   return (
     <>
+      <Navbar />
       <link
         rel="stylesheet"
         href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
-      ></link>
+      />
       <main className={authCSS.main}>
         <div className={authCSS.container}>
           <section className={authCSS.wrapper}>
@@ -52,7 +54,7 @@ function Login() {
                   onChange={(e) => setEmail(e.target.value)}
                   className={authCSS.input_field}
                   placeholder="Email ou username"
-                ></input>
+                />
               </div>
               <div className={authCSS.input_control}>
                 <input
@@ -61,7 +63,7 @@ function Login() {
                   onChange={(e) => setPassword(e.target.value)}
                   className={authCSS.input_field}
                   placeholder="Password"
-                ></input>
+                />
               </div>
               <div className={authCSS.input_control}>
                 <a

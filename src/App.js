@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import ResetPassword from "./components/ResetPassword";
@@ -9,6 +10,7 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route exact path="/navbar" element={<Navbar />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/resetpassword" element={<ResetPassword />} />
