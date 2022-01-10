@@ -1,0 +1,67 @@
+/*
+  Design base elaborado por: baahubali92 @ CodePen.
+*/
+a {
+  color: darkslategray;
+  font-size: 13px;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+.footer_section {
+  background: #f8f8f8;
+  position: relative;
+}
+.footer_logo img {
+  max-width: 200px;
+}
+.footer_text p {
+  margin-top: 12px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: #7e7e7e;
+  line-height: 28px;
+}
+.footer_social_icon {
+  margin-top: 20px;
+}
+.footer_social_icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.footer_social_icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+  background: #d3d3d3;
+}
+.footer_widget_heading h3 {
+  color: #000000;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+  text-transform: uppercase;
+}
+.footer_widget_heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #39ac31;
+}
+.footer_widget .footer_ul li {
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 12px;
+}
+.footer_menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
