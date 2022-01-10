@@ -1,0 +1,151 @@
+#slideset3 {
+  margin-top: 2em;
+  height: 14em;
+  max-width: 50%;
+  right: 15%;
+  position: absolute;
+  overflow: hidden;
+}
+
+#slideset3 > * {
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#slideset3 > *:first-child {
+  animation: 18s autoplay3 infinite ease-in-out;
+}
+@keyframes autoplay3 {
+  0% {
+    margin-top: 20em;
+  }
+  25% {
+    margin-top: 0em;
+  }
+  50% {
+    margin-top: -14em;
+  }
+  75% {
+    margin-top: -28em;
+  }
+  100% {
+    margin-top: -42em;
+  }
+}
+
+/*tab-selector*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+.main {
+  position: relative;
+  z-index: 1;
+  background: #f8f9fc;
+  width: 455px;
+  margin: 50px 25% auto;
+  padding: 10px 30px 40px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.p {
+  font-size: 13px;
+}
+.input,
+.section {
+  clear: both;
+  padding-top: 10px;
+  display: none;
+}
+.label {
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+  float: left;
+  padding: 10px 30px;
+  border-top: 2px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid #ddd;
+}
+.label:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+  display: block;
+}
+.input:checked + label {
+  border-top-color: #ffb03d;
+  border-right-color: #ddd;
+  border-left-color: #ddd;
+  border-bottom-color: transparent;
+  text-decoration: none;
+}
+
+#inputSearch {
+  font-size: 14px;
+}
+
+/* carousel */
+/*https://gosnippets.com/snippets/bootstrap-carousel-with-cards-in-3-columns*/
+
+.slideJobs {
+  display: flex; /* or inline-flex */
+
+  align-items: center;
+  justify-content: center;
+
+  max-width: 100%;
+  margin: 0px 150px 0px 150px;
+}
+
+#sectionSlide {
+  width: 70%;
+}
+
+.card_title {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.sctLoct {
+  display: flex; /* or inline-flex */
+  flex-direction: row-reverse;
+  display: right;
+  align-items: right;
+  justify-content: right;
+
+  max-width: 100%;
+  margin: 0px 150px 0px 150px;
+}
+
+.divLoct {
+  width: 30%;
+  margin-right: 6em;
+}
+
+.imgLoct {
+  opacity: 0.8;
+}
+
+.loctBtn {
+  margin-top: 5%;
+  width: 40%;
+}
+
+/*https://getbootstrap.com/docs/5.0/components/navs-tabs/*/
+/*tab selector*/
+
+.tabViewBox {
+  display: flex; /* or inline-flex */
+  align-items: center;
+  justify-content: center;
+  margin: 0px 550px 0px 550px;
+}
+
+.tabView {
+}

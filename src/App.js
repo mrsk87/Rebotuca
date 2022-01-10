@@ -3,12 +3,14 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import ResetPassword from "./components/ResetPassword";
 import Dashboard from "./components/Dashboard";
+import Landing from "./components/Landing";
 import Erno404 from "./components/404";
 
 function App() {
   return (
     <Router>
       <Routes>
+        <Route exact path="/" element={<Landing />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/resetpassword" element={<ResetPassword />} />
