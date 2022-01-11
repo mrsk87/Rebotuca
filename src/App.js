@@ -6,6 +6,7 @@ import ResetPassword from "./components/ResetPassword";
 import Dashboard from "./components/NewDashboard";
 import Landing from "./components/Landing";
 import Erno404 from "./components/404";
+import ProfSearch from "./components/ProfSearch";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/resetpassword" element={<ResetPassword />} />
         <Route exact path="/dashboard" element={<Dashboard />} />
+        <Route exact path="/profsearch" element={<ProfSearch />} />
         <Route path="*" element={<Erno404 />} />
       </Routes>
     </Router>

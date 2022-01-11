@@ -4,8 +4,15 @@ import sketch from "../assets/img/sketch.png";
 import carpImg from "../assets/img/carp.png";
 import pintorImg from "../assets/img/pintor.jpg";
 import jardImg from "../assets/img/jardinagem.jpg";
+import Modal from "./Modal";
+import useModal from "./useModal";
+import modalCSS from "../css/modal.module.css";
 
 function Dash() {
+  const { isShowing, toggle } = useModal();
+  //Modal
+  //https://upmostly.com/tutorials/modal-components-react-custom-hooks
+
   return (
     <>
       <section className={dashCSS.projectos}>
@@ -18,12 +25,15 @@ function Dash() {
           <div className={dashCSS.iconProjectoTexto}>
             <h3>Crie o seu projeto</h3>
             <p>
-              Coloque o seu projeto em andamento com a solicitação de
-              profissionais num alargado leque de soluções profissionais.
+              Coloque o seu projeto em andamento, com a solicitação de
+              profissionais num alargado leque de soluções.
             </p>
-            <button type="button" class="btn btn-primary">
-              Fazer Pedido
-            </button>
+            <div className={modalCSS.main}>
+              <button onClick={toggle} class="btn btn-primary">
+                Fazer Pedido
+              </button>
+              <Modal isShowing={isShowing} hide={toggle} />
+            </div>
           </div>
         </div>
       </section>
