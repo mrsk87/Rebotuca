@@ -1,9 +1,12 @@
 import React from "react";
 import dashCSS from "../css/dash.module.css";
+import NavBar from "./Navbar";
+import Footer from "./Footer";
 
-function Landing() {
+function ProfSearch() {
   return (
     <>
+      <NavBar />
       <section className={dashCSS.projectos}>
         <label for="exampleDataList" class="form-label">
           Datalist example
@@ -28,7 +31,8 @@ function Landing() {
           aria-label="default input example"
         />
       </section>
+      <Footer />
     </>
   );
 }
-export default Landing;
+export default ProfSearch;

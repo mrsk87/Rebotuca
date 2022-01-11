@@ -7,6 +7,7 @@ import Dashboard from "./components/NewDashboard";
 import Landing from "./components/Landing";
 import Erno404 from "./components/404";
 import ProfSearch from "./components/ProfSearch";
+import Test from "./components/Test";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/resetpassword" element={<ResetPassword />} />
         <Route exact path="/dashboard" element={<Dashboard />} />
         <Route exact path="/profsearch" element={<ProfSearch />} />
+        <Route exact path="/test" element={<Test />} />
         <Route path="*" element={<Erno404 />} />
       </Routes>
     </Router>

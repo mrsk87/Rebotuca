@@ -29,7 +29,73 @@ const Modal = ({ isShowing, hide }) =>
               </div>
               <section>
                 <label for="exampleDataList" class="form-label">
-                  Gostas de pito?
+                  O que procuras?
+                </label>
+                <input
+                  class="form-control"
+                  list="datalistOptions"
+                  id="exampleDataList"
+                  placeholder="Type to search..."
+                />
+                <datalist id="datalistOptions">
+                  <option value="Pintor" />
+                  <option value="Eletricista" />
+                  <option value="Carpinteiro" />
+                  <option value="Jardineiro" />
+                  <option value="Ferreiro" />
+                  <option value="Programador" />
+                </datalist>
+                <label for="exampleDataList" class="form-label">
+                  <br />
+                  Faça uma escrição e objetivo do que deseja:
+                </label>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Default input"
+                  aria-label="default input example"
+                />
+                <label for="exampleDataList" class="form-label">
+                  <br />
+                  Escolha a data que deseja começar:
+                </label>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Default input"
+                  aria-label="default input example"
+                />
+                <label for="exampleDataList" class="form-label">
+                  <br />
+                  Quanto tempo irá ser necessario o profissional?
+                </label>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Default input"
+                  aria-label="default input example"
+                />
+                <label for="exampleDataList" class="form-label">
+                  <br />
+                  Quando quer ser contactado?
+                </label>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Default input"
+                  aria-label="default input example"
+                />
+                <label for="exampleDataList" class="form-label">
+                  <br />
+                </label>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Default input"
+                  aria-label="default input example"
+                />
+                <label for="exampleDataList" class="form-label">
+                  Codigo Postal
                 </label>
                 <input
                   class="form-control"
@@ -45,8 +111,32 @@ const Modal = ({ isShowing, hide }) =>
                   <option value="Nao sei" />
                 </datalist>
                 <label for="exampleDataList" class="form-label">
-                  <br />E onde queres comer o pito?
+                  <br />
+                  Onde gostaria de receber os orçamentos?
                 </label>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault1"
+                  />
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Default radio
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault2"
+                    checked
+                  />
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Default checked radio
+                  </label>
+                </div>
                 <input
                   class="form-control"
                   type="text"

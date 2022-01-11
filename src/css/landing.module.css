@@ -1,5 +1,5 @@
 #slideset3 {
-  margin-top: 2em;
+  margin-top: 3em;
   height: 14em;
   max-width: 50%;
   right: 15%;
@@ -14,23 +14,26 @@
 }
 
 #slideset3 > *:first-child {
-  animation: 18s autoplay3 infinite ease-in-out;
+  animation: 30s autoplay3 infinite ease-in-out;
 }
 @keyframes autoplay3 {
   0% {
     margin-top: 20em;
   }
-  25% {
+  20% {
     margin-top: 0em;
   }
-  50% {
+  40% {
     margin-top: -14em;
   }
-  75% {
+  60% {
     margin-top: -28em;
   }
-  100% {
+  80% {
     margin-top: -42em;
+  }
+  100% {
+    margin-top: -56em;
   }
 }
 

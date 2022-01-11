@@ -6,10 +6,13 @@ import slid2 from "../assets/img/design-de-interiores.jpg";
 import slid3 from "../assets/img/coffe.jpg";
 import slid4 from "../assets/img/white.jpg";
 import loct from "../assets/img/location.jpg";
+import NavBar from "./Navbar";
+import Footer from "./Footer";
 
 function Landing() {
   return (
     <>
+      <NavBar />
       <div id={landCSS.slideset3}>
         <div>
           <img className={landCSS.img} src={slid1}></img>
@@ -19,6 +22,12 @@ function Landing() {
         </div>
         <div>
           <img className={landCSS.img} src={slid2}></img>
+        </div>
+        <div>
+          <img className={landCSS.img} src={slid4}></img>
+        </div>
+        <div>
+          <img className={landCSS.img} src={slid3}></img>
         </div>
       </div>
 
@@ -580,6 +589,7 @@ function Landing() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
