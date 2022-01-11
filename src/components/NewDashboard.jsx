@@ -5,7 +5,7 @@ import carpImg from "../assets/img/carp.png";
 import pintorImg from "../assets/img/pintor.jpg";
 import jardImg from "../assets/img/jardinagem.jpg";
 
-function Landing() {
+function Dash() {
   return (
     <>
       <section className={dashCSS.projectos}>
@@ -103,4 +103,4 @@ function Landing() {
     </>
   );
 }
-export default Landing;
+export default Dash;
