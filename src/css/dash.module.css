@@ -1,0 +1,42 @@
+.projectos {
+  position: relative;
+  z-index: 1;
+  background: #f8f9fc;
+  width: 455px;
+  margin: 50px 25% auto;
+  padding: 10px 30px 40px;
+}
+
+.crieProjectos {
+  position: relative;
+  z-index: 1;
+  background: #f8f9fc;
+  width: 755px;
+  margin: 50px 5% auto;
+  padding: 10px 30px 40px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.iconProjecto {
+  max-width: 10%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.iconProjectoTexto {
+  max-width: 60%;
+  text-align: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cards {
+  max-width: 60%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.child {
+  margin-top: 15px;
+}

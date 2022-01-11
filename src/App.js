@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import ResetPassword from "./components/ResetPassword";
-import Dashboard from "./components/Dashboard";
+import Dashboard from "./components/NewDashboard";
 import Landing from "./components/Landing";
 import Erno404 from "./components/404";
 
