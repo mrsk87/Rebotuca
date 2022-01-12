@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import modalCSS from "../css/modal.module.css";
+import modalCSS from "../css/modalDash.module.css";
 
 const Modal = ({ isShowing, hide }) =>
   isShowing
@@ -29,13 +29,13 @@ const Modal = ({ isShowing, hide }) =>
               </div>
               <section>
                 <label for="exampleDataList" class="form-label">
-                  O que procuras?
+                  O que procura?
                 </label>
                 <input
                   class="form-control"
                   list="datalistOptions"
                   id="exampleDataList"
-                  placeholder="Type to search..."
+                  placeholder="Pintor, Carpinteiro.."
                 />
                 <datalist id="datalistOptions">
                   <option value="Pintor" />
@@ -47,22 +47,26 @@ const Modal = ({ isShowing, hide }) =>
                 </datalist>
                 <label for="exampleDataList" class="form-label">
                   <br />
-                  Faça uma escrição e objetivo do que deseja:
+                  Faça uma descrição e objetivo do que deseja:
                 </label>
-                <input
-                  class="form-control"
-                  type="text"
-                  placeholder="Default input"
-                  aria-label="default input example"
-                />
+                <div class="form-floating">
+                  <textarea
+                    class="form-control"
+                    placeholder="Leave a comment here"
+                    id="floatingTextarea"
+                  ></textarea>
+                  <label for="floatingTextarea">
+                    Cortar relva em jardim com 20 m2
+                  </label>
+                </div>
                 <label for="exampleDataList" class="form-label">
                   <br />
                   Escolha a data que deseja começar:
                 </label>
                 <input
                   class="form-control"
-                  type="text"
-                  placeholder="Default input"
+                  type="date"
+                  placeholder="10/02/2100"
                   aria-label="default input example"
                 />
                 <label for="exampleDataList" class="form-label">
@@ -72,28 +76,20 @@ const Modal = ({ isShowing, hide }) =>
                 <input
                   class="form-control"
                   type="text"
-                  placeholder="Default input"
+                  placeholder="1 dia, 10 dias, não tenho ideia"
                   aria-label="default input example"
                 />
                 <label for="exampleDataList" class="form-label">
                   <br />
-                  Quando quer ser contactado?
+                  Que hora prefere para quer ser contactado?
                 </label>
                 <input
                   class="form-control"
                   type="text"
-                  placeholder="Default input"
+                  placeholder="Entre as 12h e as 13h, das 9h as 18h.."
                   aria-label="default input example"
                 />
-                <label for="exampleDataList" class="form-label">
-                  <br />
-                </label>
-                <input
-                  class="form-control"
-                  type="text"
-                  placeholder="Default input"
-                  aria-label="default input example"
-                />
+                <br />
                 <label for="exampleDataList" class="form-label">
                   Codigo Postal
                 </label>
@@ -101,18 +97,17 @@ const Modal = ({ isShowing, hide }) =>
                   class="form-control"
                   list="datalistOptions"
                   id="exampleDataList"
-                  placeholder="Type to search..."
+                  placeholder="4900-200 Limoeiro Laranja"
                 />
                 <datalist id="datalistOptions">
-                  <option value="Sim, bem passado" />
-                  <option value="Sim, e uma canja" />
-                  <option value="Nao, prefiro sande de hortigas" />
-                  <option value="Olha tanta luz" />
-                  <option value="Nao sei" />
+                  <option value="4900-208 Penedo de Cima" />
+                  <option value="4900-508 Penedo de baixo" />
+                  <option value="4950-208 Caminho fundo" />
+                  <option value="4970-208 Rua Dr Antonio sem Força" />
                 </datalist>
                 <label for="exampleDataList" class="form-label">
                   <br />
-                  Onde gostaria de receber os orçamentos?
+                  Como gostaria de ser contactado?
                 </label>
                 <div class="form-check">
                   <input
@@ -122,7 +117,7 @@ const Modal = ({ isShowing, hide }) =>
                     id="flexRadioDefault1"
                   />
                   <label class="form-check-label" for="flexRadioDefault1">
-                    Default radio
+                    Telemovel
                   </label>
                 </div>
                 <div class="form-check">
@@ -134,16 +129,33 @@ const Modal = ({ isShowing, hide }) =>
                     checked
                   />
                   <label class="form-check-label" for="flexRadioDefault2">
-                    Default checked radio
+                    Email
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault2"
+                    checked
+                  />
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Mensagem interna(?)
                   </label>
                 </div>
                 <input
                   class="form-control"
                   type="text"
-                  placeholder="Default input"
+                  placeholder="Indique aqui o email ou numero de telemovel"
                   aria-label="default input example"
                 />
               </section>
+              <br />
+              <br />
+              <button type="button" class="btn btn-primary">
+                Guardar
+              </button>
             </div>
           </div>
         </React.Fragment>,

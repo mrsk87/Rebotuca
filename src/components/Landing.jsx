@@ -29,6 +29,9 @@ function Landing() {
         <div>
           <img className={landCSS.img} src={slid3}></img>
         </div>
+        <div>
+          <img className={landCSS.img} src={slid4}></img>
+        </div>
       </div>
 
       <main className={landCSS.main}>
@@ -520,7 +523,7 @@ function Landing() {
                 aria-controls="pills-home"
                 aria-selected="true"
               >
-                Casa
+                Dê vida ao seu projeto
               </button>
             </li>
             <li class="nav-item" role="presentation">
@@ -534,7 +537,7 @@ function Landing() {
                 aria-controls="pills-profile"
                 aria-selected="false"
               >
-                Jardim
+                Como funciona
               </button>
             </li>
             <li class="nav-item" role="presentation">
@@ -548,7 +551,7 @@ function Landing() {
                 aria-controls="pills-contact"
                 aria-selected="false"
               >
-                Mecanica
+                Onde posso utilizar
               </button>
             </li>
           </ul>

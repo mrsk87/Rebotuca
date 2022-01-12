@@ -1,0 +1,65 @@
+.perfil {
+  position: relative;
+  z-index: 1;
+  background: #f8f9fc;
+  width: 1px;
+  margin: 50px 20% auto;
+  padding: 10px 30px 40px;
+}
+
+.criePerfil {
+  position: relative;
+  z-index: 1;
+  background: #f8f9fc;
+  width: 855px;
+  margin: 50px 5% auto;
+  padding: 10px 30px 40px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  
+  display: flex;
+ 
+}
+
+.iconPerfil {
+  max-width: 10%;
+  margin-top: 8%;
+  position: relative;
+
+  float: left;
+}
+
+.iconPerfilTexto1 {
+  max-width: 60%;
+  width: 60%;
+  position: relative;
+  margin-left: 15%;
+}
+
+.iconPerfilTexto2 {
+  max-width: 60%;
+  width: 50%;
+  position: relative;
+  margin-left: 1%;
+  
+}
+
+.precoH {
+  width: 30%;
+  margin-top: 4%;
+  margin-left: 5%;
+  position: relative;
+  font-size: medium;
+  
+
+  float: right;
+}
+
+.cards {
+  max-width: 60%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.child {
+  margin-top: 15px;
+}
