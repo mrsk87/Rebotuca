@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
+import cx from "classnames";
+import authCSS from "../css/auth.module.css";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
+import { useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
 import {
   auth,
   registerWithEmailAndPassword,
@@ -25,32 +30,59 @@ function Register() {
   }, [user, loading]);
 
   return (
-    <div>
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        placeholder="Nome Completo"
+    <>
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
       />
-      <input
-        type="text"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Email"
-      />
-      <input
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        placeholder="Password"
-      />
-      <button onClick={register}>Register</button>
-      <button onClick={signInWithGoogle}>Register with Google</button>
-
-      <div>
-        Already have an account? <Link to="/">Login</Link> now.
-      </div>
-    </div>
+      <main className={authCSS.main}>
+        <div className={authCSS.container}>
+          <section className={authCSS.wrapper}>
+            <div className={authCSS.heading}>
+              <h1 className={cx(authCSS.text, authCSS.text_large)}>Register</h1>
+              <p className={cx(authCSS.text, authCSS.text_normal)}></p>
+              <form name="login" className={authCSS.form}>
+                <div className={authCSS.input_control}>
+                  <input
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className={authCSS.input_field}
+                    placeholder="Nome"
+                  />
+                </div>
+                <div className={authCSS.input_control}>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className={authCSS.input_field}
+                    placeholder="Email ou username"
+                  />
+                </div>
+                <div className={authCSS.input_control}>
+                  <input
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className={authCSS.input_field}
+                    placeholder="Password"
+                  />
+                </div>
+                <input
+                  type="button"
+                  onClick={() => register(name, email, password)}
+                  className={authCSS.input_submit}
+                  value="Register"
+                ></input>
+                <button onClick={register}>Register</button>
+                <button onClick={signInWithGoogle}>Register with Google</button>
+              </form>
+            </div>
+          </section>
+        </div>
+      </main>
+    </>
   );
 }
 
