@@ -2,7 +2,44 @@ import React from "react";
 import ReactDOM from "react-dom";
 import modalCSS from "../css/modalPerfil.module.css";
 
-const Modal = ({ isShowing, hide }) =>
+import {
+  collection,
+  where,
+  query,
+  getDocs,
+  setDoc,
+  doc,
+} from "firebase/firestore";
+import { db } from "../firebase";
+
+let state = {};
+
+const updateInput = (e) => {
+  state[e.target.name] = e.target.value;
+};
+
+const modifyAcc = async (uid) => {
+  console.log(uid);
+  const q = query(collection(db, "users"), where("uid", "==", uid));
+  const snapshot = await getDocs(q);
+
+  const accRef = doc(db, "users", snapshot.docs[0].id);
+  await setDoc(
+    accRef,
+    {
+      name: state.name,
+      localidade: state.localidade,
+      academico: state.academico,
+      descricao: state.descricao,
+      preco: state.preco,
+      telemovel: state.telemovel,
+    },
+    { merge: true }
+  );
+  //console.log("Modificado com sucesso");
+};
+
+const Modal = ({ isShowing, hide, uid }) =>
   isShowing
     ? ReactDOM.createPortal(
         <React.Fragment>
@@ -34,6 +71,9 @@ const Modal = ({ isShowing, hide }) =>
                 </label>
                 <input
                   class="form-control"
+                  name="name"
+                  value={state.name}
+                  onChange={updateInput}
                   type="text"
                   placeholder="Nome"
                   aria-label="default input example"
@@ -44,6 +84,9 @@ const Modal = ({ isShowing, hide }) =>
                 </label>
                 <input
                   class="form-control"
+                  name="localidade"
+                  value={state.localidade}
+                  onChange={updateInput}
                   list="datalistOptions"
                   id="exampleDataList"
                   placeholder="4900-200 Limoeiro Laranja"
@@ -69,10 +112,9 @@ const Modal = ({ isShowing, hide }) =>
                     class="form-check-input"
                     type="checkbox"
                     value=""
-                    id="flexCheckChecked"
-                    checked
+                    id="flexCheck"
                   />
-                  <label class="form-check-label" for="flexCheckChecked">
+                  <label class="form-check-label" for="flexCheck">
                     Serralheiro
                   </label>
                 </div>
@@ -81,10 +123,9 @@ const Modal = ({ isShowing, hide }) =>
                     class="form-check-input"
                     type="checkbox"
                     value=""
-                    id="flexCheckChecked"
-                    checked
+                    id="flexCheck"
                   />
-                  <label class="form-check-label" for="flexCheckChecked">
+                  <label class="form-check-label" for="flexCheck">
                     Mecanico
                   </label>
                 </div>
@@ -93,10 +134,9 @@ const Modal = ({ isShowing, hide }) =>
                     class="form-check-input"
                     type="checkbox"
                     value=""
-                    id="flexCheckChecked"
-                    checked
+                    id="flexCheck"
                   />
-                  <label class="form-check-label" for="flexCheckChecked">
+                  <label class="form-check-label" for="flexCheck">
                     Eletricista
                   </label>
                 </div>
@@ -105,10 +145,9 @@ const Modal = ({ isShowing, hide }) =>
                     class="form-check-input"
                     type="checkbox"
                     value=""
-                    id="flexCheckChecked"
-                    checked
+                    id="flexCheck"
                   />
-                  <label class="form-check-label" for="flexCheckChecked">
+                  <label class="form-check-label" for="flexCheck">
                     Carpinteiro
                   </label>
                 </div>
@@ -117,10 +156,9 @@ const Modal = ({ isShowing, hide }) =>
                     class="form-check-input"
                     type="checkbox"
                     value=""
-                    id="flexCheckChecked"
-                    checked
+                    id="flexCheck"
                   />
-                  <label class="form-check-label" for="flexCheckChecked">
+                  <label class="form-check-label" for="flexCheck">
                     Jardinagem
                   </label>
                 </div>
@@ -130,10 +168,9 @@ const Modal = ({ isShowing, hide }) =>
                     class="form-check-input"
                     type="checkbox"
                     value=""
-                    id="flexCheckChecked"
-                    checked
+                    id="flexCheck"
                   />
-                  <label class="form-check-label" for="flexCheckChecked">
+                  <label class="form-check-label" for="flexCheck">
                     Limpeza
                   </label>
                 </div>
@@ -145,7 +182,9 @@ const Modal = ({ isShowing, hide }) =>
                 <div class="form-floating">
                   <textarea
                     class="form-control"
-                    placeholder="Leave a comment here"
+                    name="descricao"
+                    value={state.descricao}
+                    onChange={updateInput}
                     id="floatingTextarea"
                   ></textarea>
                   <label for="floatingTextarea">
@@ -160,7 +199,9 @@ const Modal = ({ isShowing, hide }) =>
                 <div class="form-floating">
                   <textarea
                     class="form-control"
-                    placeholder="Leave a comment here"
+                    name="academico"
+                    value={state.academico}
+                    onChange={updateInput}
                     id="floatingTextarea"
                   ></textarea>
                   <label for="floatingTextarea">
@@ -174,6 +215,9 @@ const Modal = ({ isShowing, hide }) =>
                 </label>
                 <input
                   class="form-control"
+                  name="preco"
+                  value={state.preco}
+                  onChange={updateInput}
                   type="text"
                   placeholder="10€"
                   aria-label="default input example"
@@ -200,7 +244,6 @@ const Modal = ({ isShowing, hide }) =>
                     type="radio"
                     name="flexRadioDefault"
                     id="flexRadioDefault2"
-                    checked
                   />
                   <label class="form-check-label" for="flexRadioDefault2">
                     Email
@@ -220,6 +263,9 @@ const Modal = ({ isShowing, hide }) =>
                 </div>
                 <input
                   class="form-control"
+                  name="telemovel"
+                  value={state.telemovel}
+                  onChange={updateInput}
                   type="text"
                   placeholder="Indique aqui o email ou numero de telemovel"
                   aria-label="default input example"
@@ -227,7 +273,7 @@ const Modal = ({ isShowing, hide }) =>
               </section>
               <br />
               <br />
-              <button type="button" class="btn btn-primary">
+              <button class="btn btn-primary" onClick={() => modifyAcc(uid)}>
                 Guardar
               </button>
             </div>

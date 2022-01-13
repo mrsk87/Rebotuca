@@ -7,7 +7,7 @@ import Dashboard from "./components/NewDashboard";
 import Landing from "./components/Landing";
 import Erno404 from "./components/404";
 import ProfSearch from "./components/ProfSearch";
-import Perfil from "./components/Perfil";
+import Profile from "./components/Profile";
 import Test from "./components/Test";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
         <Route exact path="/resetpassword" element={<ResetPassword />} />
         <Route exact path="/dashboard" element={<Dashboard />} />
         <Route exact path="/profsearch" element={<ProfSearch />} />
-        <Route exact path="/perfil" element={<Perfil />} />
+        <Route exact path="/profile" element={<Profile />} />
         <Route exact path="/test" element={<Test />} />
         <Route path="*" element={<Erno404 />} />
       </Routes>

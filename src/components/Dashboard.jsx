@@ -14,7 +14,6 @@ function Dashboard() {
     try {
       const q = query(collection(db, "users"), where("uid", "==", user?.uid));
       const querySnapshot = await getDocs(q);
-
       const data = querySnapshot.docs[0].data();
       setName(data.name);
     } catch (err) {

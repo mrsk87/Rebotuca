@@ -62,14 +62,20 @@ export const loginWithEmailAndPassword = async (email, password) => {
 };
 export const registerWithEmailAndPassword = async (name, email, password) => {
   try {
-    const res = await createUserWithEmailAndPassword(email, password);
+    const res = await createUserWithEmailAndPassword(auth, email, password);
     const user = res.user;
-    await collection(db, "users").add({
-      uid: user.uid,
-      name,
-      authProvider: "local",
-      email,
-    });
+    const q = query(collection(db, "users"), where("uid", "==", user.uid));
+    const querySnapshot = await getDocs(q);
+
+    if (querySnapshot.size === 0) {
+      const docRef = await addDoc(collection(db, "users"), {
+        uid: user.uid,
+        authProvider: "Email",
+        name: name,
+        email: user.email,
+      });
+      console.log("Document written with ID: ", docRef.id);
+    }
   } catch (err) {
     console.error(err);
     alert(err.message);
