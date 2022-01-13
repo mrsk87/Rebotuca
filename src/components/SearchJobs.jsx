@@ -2,13 +2,14 @@ import React, { useEffect } from "react";
 
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router";
-import { auth} from "../firebase";
+import { auth } from "../firebase";
 
 import dashCSS from "../css/projects.module.css";
+
 import NavBar from "./Navbar";
 import Footer from "./Footer";
 
-function ProfSearch() {
+function SearchJobs() {
   const navigate = useNavigate();
   const [user, loading] = useAuthState(auth);
 
@@ -129,4 +130,4 @@ function ProfSearch() {
     </>
   );
 }
-export default ProfSearch;
+export default SearchJobs;
