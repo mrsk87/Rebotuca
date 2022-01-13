@@ -17,7 +17,7 @@ import limpImg from "../assets/img/limp.png";
 
 import Modal from "./ModalProject";
 import useModal from "./useModal";
-import NavBar from "./Navbar";
+import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 function Projects() {
@@ -38,17 +38,31 @@ function Projects() {
     }
   };
 
+  const fetchUserProjects = async () => {
+    try {
+      const q = query(collection(db, "jobs"), where("uid", "==", user?.uid));
+      const querySnapshot = await getDocs(q);
+
+      const data = querySnapshot.docs[0].data();
+      console.log(data)
+    } catch (err) {
+      console.error(err);
+      alert("An error occured while fetching user data");
+    }
+  };
+
   useEffect(() => {
     if (loading) return;
     if (!user) return navigate("/");
 
     fetchUser();
+    fetchUserProjects();
   }, [user, loading]);
 
   const { isShowing, toggle } = useModal();
   return (
     <>
-      <NavBar />
+      <Navbar />
       <section className={dashCSS.projectos}>
         <h1>Projectos</h1>
         <div className={dashCSS.crieProjectos}>
