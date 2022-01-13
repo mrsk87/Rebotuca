@@ -1,10 +1,11 @@
 .perfil {
   position: relative;
   z-index: 1;
-  background: #f8f9fc;
-  width: 1px;
-  margin: 50px 20% auto;
-  padding: 10px 30px 40px;
+  width: 35%;
+  margin: 50px 15% auto;
+  @media (max-width: 575px) {
+    margin: 50px 1%;
+  }
 }
 
 .criePerfil {
@@ -12,12 +13,11 @@
   z-index: 1;
   background: #f8f9fc;
   width: 855px;
-  margin: 50px 5% auto;
+
   padding: 10px 30px 40px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  
+
   display: flex;
- 
 }
 
 .iconPerfil {
@@ -40,7 +40,6 @@
   width: 50%;
   position: relative;
   margin-left: 1%;
-  
 }
 
 .precoH {
@@ -49,7 +48,6 @@
   margin-left: 5%;
   position: relative;
   font-size: medium;
-  
 
   float: right;
 }

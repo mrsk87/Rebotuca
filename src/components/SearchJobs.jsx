@@ -9,27 +9,108 @@ function ProfSearch() {
       <NavBar />
       <section className={dashCSS.projectos}>
         <label for="exampleDataList" class="form-label">
-          Datalist example
+          Search Jobs
         </label>
         <input
           class="form-control"
           list="datalistOptions"
           id="exampleDataList"
-          placeholder="Type to search..."
+          placeholder="Localidade"
         />
         <datalist id="datalistOptions">
-          <option value="San Francisco" />
-          <option value="New York" />
-          <option value="Seattle" />
-          <option value="Los Angeles" />
-          <option value="Chicago" />
+          <option value="Viana do Castelo" />
+          <option value="Lanhelas" />
+          <option value="Torre" />
+          <option value="Marte" />
+          <option value="Jupiter" />
         </datalist>
-        <input
-          class="form-control"
-          type="text"
-          placeholder="Default input"
-          aria-label="default input example"
-        />
+        <label for="exampleDataList" class="form-label">
+          <br />
+          Profissoes
+        </label>
+
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckDefault"
+          />
+          <label class="form-check-label" for="flexCheckDefault">
+            Pedreiro
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheck"
+          />
+          <label class="form-check-label" for="flexCheck">
+            Serralheiro
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheck"
+          />
+          <label class="form-check-label" for="flexCheck">
+            Mecanico
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheck"
+          />
+          <label class="form-check-label" for="flexCheck">
+            Eletricista
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheck"
+          />
+          <label class="form-check-label" for="flexCheck">
+            Carpinteiro
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheck"
+          />
+          <label class="form-check-label" for="flexCheck">
+            Jardinagem
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheck"
+          />
+          <label class="form-check-label" for="flexCheck">
+            Limpeza
+          </label>
+        </div>
+        <br />
+        <button type="submit" class="input-group-text btn-success">
+          <i class="bi bi-search me-2"></i> Procurar
+        </button>
       </section>
       <Footer />
     </>
