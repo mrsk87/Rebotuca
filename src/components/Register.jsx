@@ -31,6 +31,7 @@ function Register() {
 
   return (
     <>
+      <Navbar />
       <link
         rel="stylesheet"
         href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
@@ -82,6 +83,7 @@ function Register() {
           </section>
         </div>
       </main>
+      <Footer />
     </>
   );
 }

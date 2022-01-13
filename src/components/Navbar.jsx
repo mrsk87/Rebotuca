@@ -52,7 +52,7 @@ function Navbar() {
                 </li>
                 <li>
                   <a className="dropdown-item" href="/searchjobs">
-                    Searh jobs
+                    Search jobs
                   </a>
                 </li>
                 <li>

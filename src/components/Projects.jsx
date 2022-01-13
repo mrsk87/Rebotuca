@@ -21,7 +21,6 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 function Projects() {
-  const { isShowing, toggle } = useModal();
   //Modal
   //https://upmostly.com/tutorials/modal-components-react-custom-hooks
   const navigate = useNavigate();
@@ -67,7 +66,7 @@ function Projects() {
     <>
       <Navbar />
       <section className={dashCSS.projectos}>
-        <h1>Projectos</h1>
+        <h1>Projetos</h1>
         <div className={dashCSS.crieProjectos}>
           <div className={dashCSS.iconProjecto}>
             <img alt="100%x280" src={sketch} />
