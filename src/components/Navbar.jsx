@@ -1,6 +1,8 @@
 import logo from "../assets/img/logo.png";
 import placeholder from "../assets/img/user.png";
 
+import { auth, db, logout } from "../firebase";
+
 function Navbar() {
   return (
     <>
@@ -62,8 +64,8 @@ function Navbar() {
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                    Sign out
+                  <a className="dropdown-item" onClick={() => logout()}>
+                    Logout
                   </a>
                 </li>
               </ul>
