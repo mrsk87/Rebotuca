@@ -2,34 +2,29 @@ import React from "react";
 import ReactDOM from "react-dom";
 import modalCSS from "../css/modalProject.module.css";
 
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../firebase";
+
 let state = {};
 
-/*const updateInput = (e) => {
+const updateInput = (e) => {
   state[e.target.name] = e.target.value;
 };
 
 const createJob = async (uid) => {
-  console.log(uid);
-  const q = query(collection(db, "users"), where("uid", "==", uid));
-  const snapshot = await getDocs(q);
+  await addDoc(collection(db, "jobs"), {
+    uid: uid,
+    lookingFor: state.lookingFor,
+    description: state.description,
+    date: state.date,
+    requestedTime: state.requestedTime,
+    contactHours: state.contactHours,
+    postalCode: state.postalCode,
+    //contactForm: state.contactForm,
+  });
+};
 
-  const accRef = doc(db, "users", snapshot.docs[0].id);
-  await setDoc(
-    accRef,
-    {
-      name: state.name,
-      localidade: state.localidade,
-      academico: state.academico,
-      descricao: state.descricao,
-      preco: state.preco,
-      telemovel: state.telemovel,
-    },
-    { merge: true }
-  );
-  //console.log("Modificado com sucesso");
-};*/
-
-const Modal = ({ isShowing, hide }) =>
+const Modal = ({ isShowing, hide, uid }) =>
   isShowing
     ? ReactDOM.createPortal(
         <React.Fragment>
@@ -55,11 +50,14 @@ const Modal = ({ isShowing, hide }) =>
                 </button>
               </div>
               <section>
-                <label for="exampleDataList" class="form-label">
+                <label htmlFor="exampleDataList" className="form-label">
                   O que procura?
                 </label>
                 <input
-                  class="form-control"
+                  className="form-control"
+                  name="lookingFor"
+                  value={state.lookingFor}
+                  onChange={updateInput}
                   list="datalistOptions"
                   id="exampleDataList"
                   placeholder="Pintor, Carpinteiro.."
@@ -72,107 +70,119 @@ const Modal = ({ isShowing, hide }) =>
                   <option value="Ferreiro" />
                   <option value="Programador" />
                 </datalist>
-                <label for="exampleDataList" class="form-label">
+                <label htmlFor="exampleDataList" className="form-label">
                   <br />
-                  Faça uma descrição e objetivo do que deseja:
+                  Faça uma descrição objetiva do que deseja:
                 </label>
-                <div class="form-floating">
+                <div className="form-floating">
                   <textarea
-                    class="form-control"
-                    placeholder="Leave a comment here"
+                    className="form-control"
+                    name="description"
+                    value={state.description}
+                    onChange={updateInput}
                     id="floatingTextarea"
                   ></textarea>
-                  <label for="floatingTextarea">
+                  <label htmlFor="floatingTextarea">
                     Cortar relva em jardim com 20 m2
                   </label>
                 </div>
-                <label for="exampleDataList" class="form-label">
+                <label htmlFor="exampleDataList" className="form-label">
                   <br />
                   Escolha a data que deseja começar:
                 </label>
                 <input
-                  class="form-control"
+                  className="form-control"
+                  name="date"
+                  value={state.date}
+                  onChange={updateInput}
                   type="date"
-                  placeholder="10/02/2100"
                   aria-label="default input example"
                 />
-                <label for="exampleDataList" class="form-label">
+                <label htmlFor="exampleDataList" className="form-label">
                   <br />
                   Quanto tempo irá ser necessario o profissional?
                 </label>
                 <input
-                  class="form-control"
+                  className="form-control"
+                  name="requestedTime"
+                  value={state.requestedTime}
+                  onChange={updateInput}
                   type="text"
                   placeholder="1 dia, 10 dias, não tenho ideia"
                   aria-label="default input example"
                 />
-                <label for="exampleDataList" class="form-label">
+                <label htmlFor="exampleDataList" className="form-label">
                   <br />
                   Que hora prefere para quer ser contactado?
                 </label>
                 <input
-                  class="form-control"
+                  className="form-control"
+                  name="contactHours"
+                  value={state.contactHours}
+                  onChange={updateInput}
                   type="text"
                   placeholder="Entre as 12h e as 13h, das 9h as 18h.."
                   aria-label="default input example"
                 />
                 <br />
-                <label for="exampleDataList" class="form-label">
+                <label htmlFor="exampleDataList" className="form-label">
                   Codigo Postal
                 </label>
                 <input
-                  class="form-control"
-                  list="datalistOptions"
-                  id="exampleDataList"
+                  className="form-control"
+                  name="postalCode"
+                  value={state.postalCode}
+                  onChange={updateInput}
                   placeholder="4900-200 Limoeiro Laranja"
                 />
-                <datalist id="datalistOptions">
-                  <option value="4900-208 Penedo de Cima" />
-                  <option value="4900-508 Penedo de baixo" />
-                  <option value="4950-208 Caminho fundo" />
-                  <option value="4970-208 Rua Dr Antonio sem Força" />
-                </datalist>
-                <label for="exampleDataList" class="form-label">
+                <label htmlFor="exampleDataList" className="form-label">
                   <br />
                   Como gostaria de ser contactado?
                 </label>
-                <div class="form-check">
+                <div className="form-check">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
+                    name="contactMethod"
+                    value={state.contactForm}
+                    //onChange={updateInput}
                     type="radio"
-                    name="flexRadioDefault"
                     id="flexRadioDefault1"
                   />
-                  <label class="form-check-label" for="flexRadioDefault1">
+                  <label className="form-check-label" htmlFor="flexRadioDefault1">
                     Telemovel
                   </label>
                 </div>
-                <div class="form-check">
+                <div className="form-check">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
+                    name="contactMethod"
+                    value={state.contactForm}
+                    //onChange={updateInput}
                     type="radio"
-                    name="flexRadioDefault"
                     id="flexRadioDefault2"
-                    checked
                   />
-                  <label class="form-check-label" for="flexRadioDefault2">
+                  <label className="form-check-label" htmlFor="flexRadioDefault2">
                     Email
                   </label>
                 </div>
-                <div class="form-check">
+                <div className="form-check">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
+                    name="contactMethod"
+                    value={state.contactForm}
+                    //onChange={updateInput}
                     type="radio"
-                    name="flexRadioDefault"
                     id="flexRadioDefault2"
-                    checked
                   />
-                  <label class="form-check-label" for="flexRadioDefault2">
+                  <label className="form-check-label" htmlFor="flexRadioDefault2">
                     Mensagem interna(?)
                   </label>
                 </div>
                 <input
-                  class="form-control"
+                  className="form-control"
+                  name="contact"
+                  value={state.contact}
+                  onChange={updateInput}
                   type="text"
                   placeholder="Indique aqui o email ou numero de telemovel"
                   aria-label="default input example"
@@ -180,8 +190,8 @@ const Modal = ({ isShowing, hide }) =>
               </section>
               <br />
               <br />
-              <button type="button" class="btn btn-primary">
-                Guardar
+              <button className="btn btn-primary" onClick={() => createJob(uid)}>
+                Criar Projeto
               </button>
             </div>
           </div>

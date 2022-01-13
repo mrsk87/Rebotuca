@@ -16,8 +16,8 @@ import Footer from "./Footer";
 function Profile() {
   const navigate = useNavigate();
   const [user, loading] = useAuthState(auth);
-
   const [uid, setUid] = useState("");
+  
   const [academico, setAcademico] = useState("");
   const [descricao, setDescricao] = useState("");
   const [localidade, setLocalidade] = useState("");
