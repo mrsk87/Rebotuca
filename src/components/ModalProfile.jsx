@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import modalCSS from "../css/modalPerfil.module.css";
+import modalCSS from "../css/modalProfile.module.css";
 
 import {
   collection,

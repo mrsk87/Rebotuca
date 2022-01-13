@@ -1,3 +1,7 @@
+.main {
+  padding-top: 3rem;
+}
+
 .perfil {
   position: relative;
   z-index: 1;
@@ -15,16 +19,13 @@
   margin: 50px 5% auto;
   padding: 10px 30px 40px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  
   display: flex;
- 
 }
 
 .iconPerfil {
   max-width: 10%;
   margin-top: 8%;
   position: relative;
-
   float: left;
 }
 
@@ -40,7 +41,6 @@
   width: 50%;
   position: relative;
   margin-left: 1%;
-  
 }
 
 .precoH {
@@ -49,7 +49,6 @@
   margin-left: 5%;
   position: relative;
   font-size: medium;
-  
 
   float: right;
 }

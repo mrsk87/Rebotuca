@@ -5,10 +5,10 @@ import { collection, query, where, getDocs } from "firebase/firestore";
 import { useNavigate } from "react-router";
 import { auth, db } from "../firebase";
 
-import perfilCSS from "../css/perfil.module.css";
-import Modal from "./ModalPerfil";
+import perfilCSS from "../css/profile.module.css";
+import Modal from "./ModalProfile";
 import useModal from "./useModal";
-import modalCSS from "../css/modalPerfil.module.css";
+
 import userImg from "../assets/img/user.png";
 import NavBar from "./Navbar";
 import Footer from "./Footer";
@@ -67,7 +67,7 @@ function Profile() {
             <h5>{name}</h5>
             <p>{localidade}</p>
             <p>Orçamentos ganhos</p>
-            <div className={modalCSS.main}>
+            <div className={perfilCSS.main}>
               <button onClick={toggle} class="btn btn-primary">
                 Editar Perfil
               </button>

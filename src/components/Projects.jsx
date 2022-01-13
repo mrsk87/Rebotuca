@@ -1,5 +1,7 @@
 import React from "react";
-import dashCSS from "../css/dash.module.css";
+
+import dashCSS from "../css/projects.module.css";
+
 import sketch from "../assets/img/sketch.png";
 import carpImg from "../assets/img/carp.png";
 import pintorImg from "../assets/img/pintor.jpg";
@@ -7,17 +9,14 @@ import jardImg from "../assets/img/jardinagem.jpg";
 import electImg from "../assets/img/electricista.jpg";
 import serrImg from "../assets/img/serralheiro.jpg";
 import limpImg from "../assets/img/limp.png";
-import Modal from "./ModalDash";
+
+import Modal from "./ModalProject";
 import useModal from "./useModal";
-import modalCSS from "../css/modalDash.module.css";
 import NavBar from "./Navbar";
 import Footer from "./Footer";
 
 function Dash() {
   const { isShowing, toggle } = useModal();
-  //Modal
-  //https://upmostly.com/tutorials/modal-components-react-custom-hooks
-
   return (
     <>
       <NavBar />
@@ -34,7 +33,7 @@ function Dash() {
               Coloque o seu projeto em andamento, com a solicitação de
               profissionais num alargado leque de soluções.
             </p>
-            <div className={modalCSS.main}>
+            <div className={dashCSS.main}>
               <button onClick={toggle} class="btn btn-primary">
                 Fazer Pedido
               </button>

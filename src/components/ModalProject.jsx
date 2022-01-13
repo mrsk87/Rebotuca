@@ -1,6 +1,33 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import modalCSS from "../css/modalDash.module.css";
+import modalCSS from "../css/modalProject.module.css";
+
+let state = {};
+
+/*const updateInput = (e) => {
+  state[e.target.name] = e.target.value;
+};
+
+const createJob = async (uid) => {
+  console.log(uid);
+  const q = query(collection(db, "users"), where("uid", "==", uid));
+  const snapshot = await getDocs(q);
+
+  const accRef = doc(db, "users", snapshot.docs[0].id);
+  await setDoc(
+    accRef,
+    {
+      name: state.name,
+      localidade: state.localidade,
+      academico: state.academico,
+      descricao: state.descricao,
+      preco: state.preco,
+      telemovel: state.telemovel,
+    },
+    { merge: true }
+  );
+  //console.log("Modificado com sucesso");
+};*/
 
 const Modal = ({ isShowing, hide }) =>
   isShowing

@@ -1,5 +1,5 @@
 import React from "react";
-import dashCSS from "../css/dash.module.css";
+import dashCSS from "../css/projects.module.css";
 import NavBar from "./Navbar";
 import Footer from "./Footer";
 
