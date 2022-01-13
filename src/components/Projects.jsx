@@ -1,4 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useNavigate } from "react-router";
+import { auth} from "../firebase";
 
 import dashCSS from "../css/projects.module.css";
 
@@ -15,7 +19,15 @@ import useModal from "./useModal";
 import NavBar from "./Navbar";
 import Footer from "./Footer";
 
-function Dash() {
+function Projects() {
+  const navigate = useNavigate();
+  const [user, loading] = useAuthState(auth);
+
+  useEffect(() => {
+    if (loading) return;
+    if (!user) return navigate("/");
+  }, [user, loading]);
+
   const { isShowing, toggle } = useModal();
   return (
     <>
@@ -119,4 +131,4 @@ function Dash() {
     </>
   );
 }
-export default Dash;
+export default Projects;
