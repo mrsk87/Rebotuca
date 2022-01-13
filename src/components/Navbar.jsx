@@ -46,17 +46,17 @@ function Navbar() {
                 aria-labelledby="dropdownUser1"
               >
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item" href="/projects">
                     New project...
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                    Settings
+                  <a className="dropdown-item" href="/searchjobs">
+                    Searh jobs
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item" href="/profile">
                     Profile
                   </a>
                 </li>

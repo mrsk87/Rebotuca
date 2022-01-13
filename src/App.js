@@ -10,6 +10,8 @@ import SearchJobs from "./components/SearchJobs";
 import Profile from "./components/Profile";
 import Test from "./components/Test";
 
+import Cards from "./components/Cards";
+
 function App() {
   return (
     <Router>
@@ -25,6 +27,8 @@ function App() {
         <Route exact path="/profile" element={<Profile />} />
 
         <Route exact path="/test" element={<Test />} />
+
+        <Route exact path="/cards" element={<Cards />} />
 
         <Route path="*" element={<Erno404 />} />
       </Routes>

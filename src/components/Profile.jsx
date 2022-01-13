@@ -59,7 +59,7 @@ function Profile() {
       <section className={perfilCSS.perfil}>
         <h3>Perfil</h3>
         <div className={perfilCSS.criePerfil}>
-          <div className={perfilCSS.iconPerfil}>
+          <div className={perfilCSS.iconPerfil} >
             <img alt="100%x280" src={userImg} />
             <br />
           </div>
