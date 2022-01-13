@@ -19,7 +19,7 @@ function Login() {
       // Trigger a loading screen
       return;
     }
-    if (user) navigate("/dashboard");
+    if (user) navigate("/projects");
   }, [user, loading]);
 
   return (
@@ -67,7 +67,7 @@ function Login() {
               </div>
               <div className={authCSS.input_control}>
                 <a
-                  href="/resetpassword"
+                  href="/resetPassword"
                   className={cx(authCSS.text, authCSS.text_links)}
                 >
                   Recuperar password

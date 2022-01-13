@@ -1,5 +1,5 @@
 #slideset3 {
-  margin-top: 2em;
+  margin-top: 7em;
   height: 14em;
   max-width: 50%;
   right: 15%;
@@ -14,23 +14,29 @@
 }
 
 #slideset3 > *:first-child {
-  animation: 18s autoplay3 infinite ease-in-out;
+  animation: 30s autoplay3 infinite ease-in-out;
 }
 @keyframes autoplay3 {
   0% {
     margin-top: 20em;
   }
-  25% {
+  17% {
     margin-top: 0em;
   }
-  50% {
+  34% {
     margin-top: -14em;
   }
-  75% {
+  51% {
     margin-top: -28em;
   }
-  100% {
+  68% {
     margin-top: -42em;
+  }
+  85% {
+    margin-top: -56em;
+  }
+  100% {
+    margin-top: -70em;
   }
 }
 
@@ -43,7 +49,7 @@
   z-index: 1;
   background: #f8f9fc;
   width: 455px;
-  margin: 50px 25% auto;
+  margin: 110px 25% auto;
   padding: 10px 30px 40px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
@@ -100,7 +106,7 @@
   justify-content: center;
 
   max-width: 100%;
-  margin: 0px 150px 0px 150px;
+  margin: 100px 150px 0px 150px;
 }
 
 #sectionSlide {
@@ -120,7 +126,7 @@
   justify-content: right;
 
   max-width: 100%;
-  margin: 0px 150px 0px 150px;
+  margin: 50px 150px 0px 150px;
 }
 
 .divLoct {
@@ -143,9 +149,11 @@
 .tabViewBox {
   display: flex; /* or inline-flex */
   align-items: center;
+  width: 930px;
   justify-content: center;
-  margin: 0px 550px 0px 550px;
+  margin: 50px 550px 100px 370px;
 }
 
 .tabView {
+  width: auto;
 }
