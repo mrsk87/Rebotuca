@@ -114,6 +114,12 @@
   margin: 100px 150px 0px 150px;
 }
 
+@media (max-width: 575px) {
+  .slideJobs {
+    margin: 110px 1% auto;
+  }
+}
+
 #sectionSlide {
   width: 70%;
 }
@@ -161,4 +167,11 @@
 
 .tabView {
   width: auto;
+}
+
+@media (max-width: 575px) {
+  .tabViewBox {
+    margin: 110px 25% auto;
+    width: 60%;
+  }
 }
