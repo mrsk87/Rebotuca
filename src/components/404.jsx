@@ -21,7 +21,7 @@ function Erno404() {
                 <p>A página que procuras não existe!</p>
 
                 <a href="/" className="link_404">
-                  Voltar para a Dashboard
+                  Voltar para a página inicial
                 </a>
               </div>
             </div>
