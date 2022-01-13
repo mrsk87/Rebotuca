@@ -9,7 +9,7 @@ function Navbar() {
       <nav className="p-3 mb-3 border-bottom bg-white">
         <div className="container">
           <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a class="navbar-brand" href="/">
+            <a className="navbar-brand" href="/">
               <img
                 src={logo}
                 alt="Logo"

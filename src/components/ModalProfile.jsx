@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import modalCSS from "../css/modalPerfil.module.css";
+import modalCSS from "../css/modalProfile.module.css";
 
 import {
   collection,
@@ -65,12 +65,12 @@ const Modal = ({ isShowing, hide, uid }) =>
                 </button>
               </div>
               <section>
-                <label for="exampleDataList" class="form-label">
+                <label for="exampleDataList" className="form-label">
                   <br />
                   Nome
                 </label>
                 <input
-                  class="form-control"
+                  className="form-control"
                   name="name"
                   value={state.name}
                   onChange={updateInput}
@@ -79,11 +79,11 @@ const Modal = ({ isShowing, hide, uid }) =>
                   aria-label="default input example"
                 />
                 <br />
-                <label for="exampleDataList" class="form-label">
+                <label for="exampleDataList" className="form-label">
                   Codigo Postal / Localidade
                 </label>
                 <input
-                  class="form-control"
+                  className="form-control"
                   name="localidade"
                   value={state.localidade}
                   onChange={updateInput}
@@ -91,97 +91,97 @@ const Modal = ({ isShowing, hide, uid }) =>
                   id="exampleDataList"
                   placeholder="4900-200 Limoeiro Laranja"
                 />
-                <label for="exampleDataList" class="form-label">
+                <label for="exampleDataList" className="form-label">
                   <br />
                   Profissoes
                 </label>
 
-                <div class="form-check">
+                <div className="form-check">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="checkbox"
                     value=""
                     id="flexCheckDefault"
                   />
-                  <label class="form-check-label" for="flexCheckDefault">
+                  <label className="form-check-label" for="flexCheckDefault">
                     Pedreiro
                   </label>
                 </div>
-                <div class="form-check form-check-inline">
+                <div className="form-check form-check-inline">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="checkbox"
                     value=""
                     id="flexCheck"
                   />
-                  <label class="form-check-label" for="flexCheck">
+                  <label className="form-check-label" for="flexCheck">
                     Serralheiro
                   </label>
                 </div>
-                <div class="form-check form-check-inline">
+                <div className="form-check form-check-inline">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="checkbox"
                     value=""
                     id="flexCheck"
                   />
-                  <label class="form-check-label" for="flexCheck">
+                  <label className="form-check-label" for="flexCheck">
                     Mecanico
                   </label>
                 </div>
-                <div class="form-check form-check-inline">
+                <div className="form-check form-check-inline">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="checkbox"
                     value=""
                     id="flexCheck"
                   />
-                  <label class="form-check-label" for="flexCheck">
+                  <label className="form-check-label" for="flexCheck">
                     Eletricista
                   </label>
                 </div>
-                <div class="form-check form-check-inline">
+                <div className="form-check form-check-inline">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="checkbox"
                     value=""
                     id="flexCheck"
                   />
-                  <label class="form-check-label" for="flexCheck">
+                  <label className="form-check-label" for="flexCheck">
                     Carpinteiro
                   </label>
                 </div>
-                <div class="form-check form-check-inline">
+                <div className="form-check form-check-inline">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="checkbox"
                     value=""
                     id="flexCheck"
                   />
-                  <label class="form-check-label" for="flexCheck">
+                  <label className="form-check-label" for="flexCheck">
                     Jardinagem
                   </label>
                 </div>
 
-                <div class="form-check">
+                <div className="form-check">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="checkbox"
                     value=""
                     id="flexCheck"
                   />
-                  <label class="form-check-label" for="flexCheck">
+                  <label className="form-check-label" for="flexCheck">
                     Limpeza
                   </label>
                 </div>
 
-                <label for="exampleDataList" class="form-label">
+                <label for="exampleDataList" className="form-label">
                   <br />
                   Descrição
                 </label>
-                <div class="form-floating">
+                <div className="form-floating">
                   <textarea
-                    class="form-control"
+                    className="form-control"
                     name="descricao"
                     value={state.descricao}
                     onChange={updateInput}
@@ -192,13 +192,13 @@ const Modal = ({ isShowing, hide, uid }) =>
                   </label>
                 </div>
 
-                <label for="exampleDataList" class="form-label">
+                <label for="exampleDataList" className="form-label">
                   <br />
                   Percurso Academico
                 </label>
-                <div class="form-floating">
+                <div className="form-floating">
                   <textarea
-                    class="form-control"
+                    className="form-control"
                     name="academico"
                     value={state.academico}
                     onChange={updateInput}
@@ -209,12 +209,12 @@ const Modal = ({ isShowing, hide, uid }) =>
                   </label>
                 </div>
 
-                <label for="exampleDataList" class="form-label">
+                <label for="exampleDataList" className="form-label">
                   <br />
                   Qual é o preço medio por hora que trabalha
                 </label>
                 <input
-                  class="form-control"
+                  className="form-control"
                   name="preco"
                   value={state.preco}
                   onChange={updateInput}
@@ -223,46 +223,46 @@ const Modal = ({ isShowing, hide, uid }) =>
                   aria-label="default input example"
                 />
 
-                <label for="exampleDataList" class="form-label">
+                <label for="exampleDataList" className="form-label">
                   <br />
                   Como gostaria de ser contactado?
                 </label>
-                <div class="form-check">
+                <div className="form-check">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="radio"
                     name="flexRadioDefault"
                     id="flexRadioDefault1"
                   />
-                  <label class="form-check-label" for="flexRadioDefault1">
+                  <label className="form-check-label" for="flexRadioDefault1">
                     Telemovel
                   </label>
                 </div>
-                <div class="form-check">
+                <div className="form-check">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="radio"
                     name="flexRadioDefault"
                     id="flexRadioDefault2"
                   />
-                  <label class="form-check-label" for="flexRadioDefault2">
+                  <label className="form-check-label" for="flexRadioDefault2">
                     Email
                   </label>
                 </div>
-                <div class="form-check">
+                <div className="form-check">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="radio"
                     name="flexRadioDefault"
                     id="flexRadioDefault2"
                     checked
                   />
-                  <label class="form-check-label" for="flexRadioDefault2">
+                  <label className="form-check-label" for="flexRadioDefault2">
                     Mensagem interna(?)
                   </label>
                 </div>
                 <input
-                  class="form-control"
+                  className="form-control"
                   name="telemovel"
                   value={state.telemovel}
                   onChange={updateInput}
@@ -273,7 +273,7 @@ const Modal = ({ isShowing, hide, uid }) =>
               </section>
               <br />
               <br />
-              <button class="btn btn-primary" onClick={() => modifyAcc(uid)}>
+              <button className="btn btn-primary" onClick={() => modifyAcc(uid)}>
                 Guardar
               </button>
             </div>

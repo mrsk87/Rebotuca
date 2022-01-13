@@ -1,9 +1,22 @@
-import React from "react";
-import dashCSS from "../css/dash.module.css";
+import React, { useEffect } from "react";
+
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useNavigate } from "react-router";
+import { auth} from "../firebase";
+
+import dashCSS from "../css/projects.module.css";
 import NavBar from "./Navbar";
 import Footer from "./Footer";
 
 function ProfSearch() {
+  const navigate = useNavigate();
+  const [user, loading] = useAuthState(auth);
+
+  useEffect(() => {
+    if (loading) return;
+    if (!user) return navigate("/");
+  }, [user, loading]);
+
   return (
     <>
       <NavBar />
