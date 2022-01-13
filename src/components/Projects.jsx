@@ -13,7 +13,7 @@ import modalCSS from "../css/modalDash.module.css";
 import NavBar from "./Navbar";
 import Footer from "./Footer";
 
-function Dash() {
+function Projects() {
   const { isShowing, toggle } = useModal();
   //Modal
   //https://upmostly.com/tutorials/modal-components-react-custom-hooks
@@ -120,4 +120,4 @@ function Dash() {
     </>
   );
 }
-export default Dash;
+export default Projects;
