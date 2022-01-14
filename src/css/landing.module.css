@@ -129,6 +129,18 @@
   font-weight: bold;
 }
 
+#card_img {
+  width: 300px;
+  height: 150px;
+  opacity: 0.7;
+}
+
+#card_img:hover {
+  width: 300px;
+  height: 150px;
+  opacity: 0.5;
+}
+
 .sctLoct {
   display: flex; /* or inline-flex */
   flex-direction: row-reverse;

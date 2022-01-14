@@ -61,6 +61,16 @@ function Navbar() {
                   </a>
                 </li>
                 <li>
+                  <a className="dropdown-item" href="/login">
+                    Login
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="/register">
+                    Register
+                  </a>
+                </li>
+                <li>
                   <hr className="dropdown-divider" />
                 </li>
                 <li>

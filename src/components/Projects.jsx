@@ -46,7 +46,7 @@ function Projects() {
       const querySnapshot = await getDocs(q);
 
       const data = querySnapshot.docs[0].data();
-      console.log(data)
+      console.log(data);
     } catch (err) {
       console.error(err);
       alert("An error occured while fetching user data");
@@ -90,35 +90,41 @@ function Projects() {
       <section className={dashCSS.cards}>
         <div className="card-group">
           <div className="card">
-            <img src={carpImg} className="card-img-top" alt="..." />
+            <img
+              id={dashCSS.card_img}
+              src={carpImg}
+              className="card-img-top"
+              alt="..."
+            />
             <div className="card-body">
               <h5 className="card-title">Carpinteiro</h5>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
-              dolor libero culpa voluptate, dolorum enim cum nihil explicabo
-              quia magnam architecto quibusdam praesentium illum iste modi
-              similique vero perspiciatis autem?
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             </div>
           </div>
           <div className="col-md-1 col-md-offset-2"></div>
           <div className="card">
-            <img src={pintorImg} className="card-img-top" alt="..." />
+            <img
+              id={dashCSS.card_img}
+              src={pintorImg}
+              className="card-img-top"
+              alt="..."
+            />
             <div className="card-body">
               <h5 className="card-title">Pintor</h5>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem,
-              earum ab. Perspiciatis eveniet tenetur pariatur facere, eligendi
-              quod. Quo, aspernatur doloremque quasi quibusdam mollitia facilis
-              illo ratione minus exercitationem temporibus?
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             </div>
           </div>
           <div className="col-md-1 col-md-offset-2"></div>
           <div className="card">
-            <img src={jardImg} className="card-img-top" alt="..." />
+            <img
+              id={dashCSS.card_img}
+              src={jardImg}
+              className="card-img-top"
+              alt="..."
+            />
             <div className="card-body">
               <h5 className="card-title">Jardineiro</h5>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              accusamus veritatis, rerum delectus neque incidunt. Ducimus,
-              officiis illo ipsum explicabo et sit expedita repellendus corrupti
-              beatae delectus impedit unde reprehenderit.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </div>
           </div>
         </div>
@@ -127,35 +133,41 @@ function Projects() {
       <section className={dashCSS.cards}>
         <div className="card-group">
           <div className="card">
-            <img src={electImg} className="card-img-top" alt="..." />
+            <img
+              id={dashCSS.card_img}
+              src={electImg}
+              className="card-img-top"
+              alt="..."
+            />
             <div className="card-body">
               <h5 className="card-title">Electricista</h5>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
-              veniam labore, corrupti fugit commodi numquam reiciendis quibusdam
-              laboriosam, amet at sequi. Architecto, consequatur. Officia
-              repudiandae facere, rem aliquam ex qui.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             </div>
           </div>
           <div className="col-md-1 col-md-offset-2"></div>
           <div className="card">
-            <img src={serrImg} className="card-img-top" alt="..." />
+            <img
+              id={dashCSS.card_img}
+              src={serrImg}
+              className="card-img-top"
+              alt="..."
+            />
             <div className="card-body">
               <h5 className="card-title">Serralheiro</h5>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quae
-              dolorum cupiditate laborum fuga sit distinctio placeat rerum
-              blanditiis rem beatae eligendi quisquam, optio, odio earum magni,
-              accusamus sapiente praesentium?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </div>
           </div>
           <div className="col-md-1 col-md-offset-2"></div>
           <div className="card">
-            <img src={limpImg} className="card-img-top" alt="..." />
+            <img
+              id={dashCSS.card_img}
+              src={limpImg}
+              className="card-img-top"
+              alt="..."
+            />
             <div className="card-body">
               <h5 className="card-title">Limpeza pós-obra</h5>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Consectetur laborum neque provident cumque architecto, debitis
-              quas blanditiis expedita illum possimus voluptate, delectus
-              tenetur. Quidem, vitae iusto ea dicta odit maxime?
             </div>
           </div>
         </div>
