@@ -38,8 +38,10 @@ function Image() {
     <div className="Image">
       <form onSubmit={formHandler}>
         <input type="file" className="input" />
-        
-        <button type="submit">Upload</button>
+
+        <button type="submit" class="btn btn-secondary">
+          Upload
+        </button>
       </form>
       <hr />
       <h2>Uploading {progress}%</h2>
