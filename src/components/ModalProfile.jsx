@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import modalCSS from "../css/modalProfile.module.css";
+import Image from "./image";
 
 import {
   collection,
@@ -65,6 +66,8 @@ const Modal = ({ isShowing, hide, uid }) =>
                 </button>
               </div>
               <section>
+                Avatar
+                <Image />
                 <label for="exampleDataList" className="form-label">
                   <br />
                   Nome
@@ -95,7 +98,6 @@ const Modal = ({ isShowing, hide, uid }) =>
                   <br />
                   Profissoes
                 </label>
-
                 <div className="form-check">
                   <input
                     className="form-check-input"
@@ -162,7 +164,6 @@ const Modal = ({ isShowing, hide, uid }) =>
                     Jardinagem
                   </label>
                 </div>
-
                 <div className="form-check">
                   <input
                     className="form-check-input"
@@ -174,7 +175,6 @@ const Modal = ({ isShowing, hide, uid }) =>
                     Limpeza
                   </label>
                 </div>
-
                 <label for="exampleDataList" className="form-label">
                   <br />
                   Descrição
@@ -191,7 +191,6 @@ const Modal = ({ isShowing, hide, uid }) =>
                     Descriçao sobre voce e o seu trabalho.
                   </label>
                 </div>
-
                 <label for="exampleDataList" className="form-label">
                   <br />
                   Percurso Academico
@@ -208,7 +207,6 @@ const Modal = ({ isShowing, hide, uid }) =>
                     Coloque os seus feitos curriculares
                   </label>
                 </div>
-
                 <label for="exampleDataList" className="form-label">
                   <br />
                   Qual é o preço medio por hora que trabalha
@@ -222,7 +220,6 @@ const Modal = ({ isShowing, hide, uid }) =>
                   placeholder="10€"
                   aria-label="default input example"
                 />
-
                 <label for="exampleDataList" className="form-label">
                   <br />
                   Como gostaria de ser contactado?
@@ -273,7 +270,10 @@ const Modal = ({ isShowing, hide, uid }) =>
               </section>
               <br />
               <br />
-              <button className="btn btn-primary" onClick={() => modifyAcc(uid)}>
+              <button
+                className="btn btn-primary"
+                onClick={() => modifyAcc(uid)}
+              >
                 Guardar
               </button>
             </div>
