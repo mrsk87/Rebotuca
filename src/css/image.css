@@ -1,0 +1,20 @@
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.Image {
+  padding: 32px;
+}
+
+.input {
+  border: 1px solid gray;
+  margin-right: 12px;
+  width: 100%;
+  font-size: 9pt;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 15pt;
+}

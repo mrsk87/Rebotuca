@@ -16,6 +16,8 @@ import {
   getFirestore,
 } from "firebase/firestore";
 
+import { getStorage } from "firebase/storage";
+
 const config = {
   apiKey: "AIzaSyCs8loJ6dPpqynqN7CXFMLPYrV_n1ygIgs",
   authDomain: "rebotuca2.firebaseapp.com",
@@ -29,6 +31,7 @@ const app = initializeApp(config);
 
 export const auth = getAuth(app);
 export const db = getFirestore(app);
+export const storage = getStorage(app);
 
 const provider = new GoogleAuthProvider();
 export const signInWithGoogle = async () => {
