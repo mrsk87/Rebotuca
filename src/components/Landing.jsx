@@ -334,7 +334,7 @@ function Landing() {
               <div class="col-6 text-right">
                 <a
                   class="btn btn-primary mb-3 mr-1"
-                  href="#carousel"
+                  href="#carousel2"
                   role="button"
                   data-slide="prev"
                 >
@@ -342,7 +342,7 @@ function Landing() {
                 </a>
                 <a
                   class="btn btn-primary mb-3 "
-                  href="#carousel"
+                  href="#carousel2"
                   role="button"
                   data-slide="next"
                 >
@@ -350,7 +350,7 @@ function Landing() {
                 </a>
               </div>
               <div class="col-12">
-                <div id="carousel" class="carousel slide" data-ride="carousel">
+                <div id="carousel2" class="carousel slide" data-ride="carousel">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                       <div class="row">
@@ -581,10 +581,11 @@ function Landing() {
               role="tabpanel"
               aria-labelledby="pills-home-tab"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-              aliquid, commodi dicta cumque animi incidunt excepturi impedit
-              dolore sit nemo dolorum omnis laudantium recusandae quod autem
-              labore sapiente. Quam, ullam!
+              A plataforma vem ajudar a ver a sua idea ser executada por
+              profissionais em varias areas. Seja o seu jardim, seja um muro, ou
+              o seu carro, ou a sua instalaçao eletrica, canalizador... nao
+              deixe de ver as suas ideias satisfeitas por nao conhecer
+              profissional da area.
             </div>
             <div
               class="tab-pane fade"
@@ -592,10 +593,11 @@ function Landing() {
               role="tabpanel"
               aria-labelledby="pills-profile-tab"
             >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae
-              quos corrupti incidunt optio porro dolorem atque eius eligendi
-              sapiente, repudiandae labore accusamus voluptatum numquam eum est
-              dolor delectus consequatur repellendus!
+              Esta plataforma foi criada com o intuito de poder dar oportunidade
+              as pessoas de poderem ver ser remunerados as suas habilidades
+              profissionais, podendo assim conseguir dar uma vida melhor as
+              pessoas nao as privando de requerer entidade patronal para
+              trabalhar na are aque mais gosta.
             </div>
             <div
               class="tab-pane fade"
@@ -603,10 +605,10 @@ function Landing() {
               role="tabpanel"
               aria-labelledby="pills-contact-tab"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              eligendi ab pariatur optio vel harum veritatis voluptates
-              excepturi maiores iure quam nisi eius obcaecati tempore,
-              laboriosam dolorem sapiente, voluptatum error.
+              A nossa plataforma está disponível em vários formatos, podendo
+              assim abranger um leque maior de pessoas. em formato web para que
+              possa aceder desde praticamente qualquer dispositivo que tenha um
+              browser e internet , e também uma aplicação para android.
             </div>
           </div>
         </div>
