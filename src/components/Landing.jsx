@@ -19,6 +19,7 @@ import limpImg from "../assets/img/limp.png";
 import loct from "../assets/img/location.jpg";
 import NavBar from "./Navbar";
 import Footer from "./Footer";
+import { Navigate } from "react-router-dom";
 
 function Landing() {
   return (
@@ -314,14 +315,27 @@ function Landing() {
           <img className={landCSS.imgLoct} src={loct} alt="" />
         </div>
         <div className={landCSS.loctBtn}>
-          <h3>Onde está o Rebotuca</h3>
+          <h3>
+            Onde está situado o <b>Rebotuca</b>?
+          </h3>
+          <br />
           <p className={landCSS.p}>
-            Neste momento so se encontra presente em Viana do Castelo.
+            Neste momento só nos encontramos presentes em{" "}
+            <b>Viana do Castelo</b>.
+          </p>
+          <p className={landCSS.p}>
+            Porém fique atento! Brevemente teremos nossos serviços em todo o
+            país!
           </p>
           <br />
-          <button type="button" class="btn btn-primary">
-            Viana do Castelo
-          </button>
+          <a
+            href="https://www.google.com/maps/place/ESTG+-+Escola+Superior+de+Tecnologia+e+Gest%C3%A3o+%7C+Polit%C3%A9cnico+do+Porto/@41.366853,-8.1969157,17z/data=!3m1!4b1!4m5!3m4!1s0xd24ebb9287835e1:0xca919ba04ec42efc!8m2!3d41.366849!4d-8.194727"
+            className={landCSS.btnLoct}
+          >
+            <button type="button" class="btn btn-primary">
+              Abrir o Maps
+            </button>
+          </a>
         </div>
       </section>
       <div className={landCSS.slideJobs}>
@@ -329,7 +343,7 @@ function Landing() {
           <div class="container">
             <div class="row">
               <div class="col-6">
-                <h3 class="mb-3">Serviços mais procurados </h3>
+                <h3 class="mb-3">Serviços mais procurados</h3>
               </div>
               <div class="col-6 text-right">
                 <a
