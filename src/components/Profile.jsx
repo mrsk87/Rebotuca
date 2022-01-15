@@ -68,7 +68,7 @@ function Profile() {
             <p>{localidade}</p>
             <p>Orçamentos ganhos</p>
             <div className={perfilCSS.main}>
-              <button onClick={toggle} class="btn btn-primary">
+              <button onClick={toggle} className="btn btn-primary">
                 Editar Perfil
               </button>
 

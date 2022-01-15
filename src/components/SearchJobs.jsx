@@ -22,11 +22,11 @@ function SearchJobs() {
     <>
       <NavBar />
       <section className={dashCSS.projectos}>
-        <label for="exampleDataList" class="form-label">
+        <label for="exampleDataList" className="form-label">
           Search Jobs
         </label>
         <input
-          class="form-control"
+          className="form-control"
           list="datalistOptions"
           id="exampleDataList"
           placeholder="Localidade"
@@ -38,92 +38,92 @@ function SearchJobs() {
           <option value="Marte" />
           <option value="Jupiter" />
         </datalist>
-        <label for="exampleDataList" class="form-label">
+        <label for="exampleDataList" className="form-label">
           <br />
           Profissoes
         </label>
 
-        <div class="form-check">
+        <div className="form-check">
           <input
-            class="form-check-input"
+            className="form-check-input"
             type="checkbox"
             value=""
             id="flexCheckDefault"
           />
-          <label class="form-check-label" for="flexCheckDefault">
+          <label className="form-check-label" for="flexCheckDefault">
             Pedreiro
           </label>
         </div>
-        <div class="form-check form-check-inline">
+        <div className="form-check form-check-inline">
           <input
-            class="form-check-input"
+            className="form-check-input"
             type="checkbox"
             value=""
             id="flexCheck"
           />
-          <label class="form-check-label" for="flexCheck">
+          <label className="form-check-label" for="flexCheck">
             Serralheiro
           </label>
         </div>
-        <div class="form-check form-check-inline">
+        <div className="form-check form-check-inline">
           <input
-            class="form-check-input"
+            className="form-check-input"
             type="checkbox"
             value=""
             id="flexCheck"
           />
-          <label class="form-check-label" for="flexCheck">
+          <label className="form-check-label" for="flexCheck">
             Mecanico
           </label>
         </div>
-        <div class="form-check form-check-inline">
+        <div className="form-check form-check-inline">
           <input
-            class="form-check-input"
+            className="form-check-input"
             type="checkbox"
             value=""
             id="flexCheck"
           />
-          <label class="form-check-label" for="flexCheck">
+          <label className="form-check-label" for="flexCheck">
             Eletricista
           </label>
         </div>
-        <div class="form-check form-check-inline">
+        <div className="form-check form-check-inline">
           <input
-            class="form-check-input"
+            className="form-check-input"
             type="checkbox"
             value=""
             id="flexCheck"
           />
-          <label class="form-check-label" for="flexCheck">
+          <label className="form-check-label" for="flexCheck">
             Carpinteiro
           </label>
         </div>
-        <div class="form-check form-check-inline">
+        <div className="form-check form-check-inline">
           <input
-            class="form-check-input"
+            className="form-check-input"
             type="checkbox"
             value=""
             id="flexCheck"
           />
-          <label class="form-check-label" for="flexCheck">
+          <label className="form-check-label" for="flexCheck">
             Jardinagem
           </label>
         </div>
 
-        <div class="form-check">
+        <div className="form-check">
           <input
-            class="form-check-input"
+            className="form-check-input"
             type="checkbox"
             value=""
             id="flexCheck"
           />
-          <label class="form-check-label" for="flexCheck">
+          <label className="form-check-label" for="flexCheck">
             Limpeza
           </label>
         </div>
         <br />
-        <button type="submit" class="input-group-text btn-success">
-          <i class="bi bi-search me-2"></i> Procurar
+        <button type="submit" className="input-group-text btn-success">
+          <i className="bi bi-search me-2"></i> Procurar
         </button>
       </section>
       <Footer />
