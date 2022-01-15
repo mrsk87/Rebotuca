@@ -44,7 +44,7 @@ function Profile() {
 
   useEffect(() => {
     if (loading) return;
-    if (!user) return navigate("/");
+    if (!user) return navigate("/login");
     
     fetchUser();
   }, [user, loading]);
