@@ -59,8 +59,8 @@ export const loginWithEmailAndPassword = async (email, password) => {
   try {
     await signInWithEmailAndPassword(auth, email, password);
   } catch (err) {
-    console.error(err);
-    alert(err.message);
+    console.log(err.message)
+    if (err.message.includes("invalid-email")) console.log("Heyyyy");
   }
 };
 export const registerWithEmailAndPassword = async (name, email, password) => {

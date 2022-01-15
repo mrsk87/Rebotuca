@@ -12,6 +12,7 @@ const updateInput = (e) => {
 };
 
 const createJob = async (uid) => {
+  console.log("createJob init")
   await addDoc(collection(db, "jobs"), {
     uid: uid,
     lookingFor: state.lookingFor,

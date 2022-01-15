@@ -19,6 +19,7 @@ import limpImg from "../assets/img/limp.png";
 import loct from "../assets/img/location.jpg";
 import NavBar from "./Navbar";
 import Footer from "./Footer";
+import { Navigate } from "react-router-dom";
 
 function Landing() {
   return (
@@ -79,16 +80,16 @@ function Landing() {
             facilisis adipiscing risus, porttitor viverra urna condimentum et.
           </p>
 
-          <form action="" class="">
-            <div class="input-group mb-3">
+          <form action="" className="">
+            <div className="input-group mb-3">
               <input
                 id={landCSS["inputSearch"]}
                 type="text"
-                class="form-control form-control-lg"
+                className="form-control form-control-lg"
                 placeholder="Procure (Eletricista, Canalizador, Pintor...)"
               />
-              <button type="submit" class="input-group-text btn-success">
-                <i class="bi bi-search me-2"></i> Procurar
+              <button type="submit" className="input-group-text btn-success">
+                <i className="bi bi-search me-2"></i> Procurar
               </button>
             </div>
           </form>
@@ -100,51 +101,51 @@ function Landing() {
             finalizar o seu projeto. Envie o seu orçamento e agarre essa
             oportunidade.
           </p>
-          <button href="/searchjobs" type="button" class="btn btn-primary">
+          <button href="/searchjobs" type="button" className="btn btn-primary">
             Encontrar
           </button>
         </section>
       </main>
 
       <div className={landCSS.slideJobs}>
-        <section class="pt-5 pb-5" id={landCSS["sectionSlide"]}>
-          <div class="container">
-            <div class="row">
-              <div class="col-6">
-                <h3 class="mb-3">Serviços mais procurados </h3>
+        <section className="pt-5 pb-5" id={landCSS["sectionSlide"]}>
+          <div className="container">
+            <div className="row">
+              <div className="col-6">
+                <h3 className="mb-3">Serviços mais procurados </h3>
               </div>
-              <div class="col-6 text-right">
+              <div className="col-6 text-right">
                 <a
-                  class="btn btn-primary mb-3 mr-1"
+                  className="btn btn-primary mb-3 mr-1"
                   href="#carousel"
                   role="button"
                   data-slide="prev"
                 >
-                  <i class="fa fa-arrow-left"></i>
+                  <i className="fa fa-arrow-left"></i>
                 </a>
                 <a
-                  class="btn btn-primary mb-3 "
+                  className="btn btn-primary mb-3 "
                   href="#carousel"
                   role="button"
                   data-slide="next"
                 >
-                  <i class="fa fa-arrow-right"></i>
+                  <i className="fa fa-arrow-right"></i>
                 </a>
               </div>
-              <div class="col-12">
-                <div id="carousel" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <div class="row">
-                        <div class="col-md-4 mb-3">
-                          <div class="card">
+              <div className="col-12">
+                <div id="carousel" className="carousel slide" data-ride="carousel">
+                  <div className="carousel-inner">
+                    <div className="carousel-item active">
+                      <div className="row">
+                        <div className="col-md-4 mb-3">
+                          <div className="card">
                             <img
                               id={landCSS.card_img}
-                              class="img-fluid"
+                              className="img-fluid"
                               alt="100%x280"
                               src={pedrImg}
                             />
-                            <div class="card-body">
+                            <div className="card-body">
                               <p className={landCSS.card_title}>Pedreiro</p>
                               <p>
                                 With supporting text below as a natural lead-in
@@ -153,15 +154,15 @@ function Landing() {
                             </div>
                           </div>
                         </div>
-                        <div class="col-md-4 mb-3">
-                          <div class="card">
+                        <div className="col-md-4 mb-3">
+                          <div className="card">
                             <img
                               id={landCSS.card_img}
-                              class="img-fluid"
+                              className="img-fluid"
                               alt="100%x280"
                               src={carpImg}
                             />
-                            <div class="card-body">
+                            <div className="card-body">
                               <p className={landCSS.card_title}>Carpinteiro</p>
                               <p>
                                 With supporting text below as a natural lead-in
@@ -170,15 +171,15 @@ function Landing() {
                             </div>
                           </div>
                         </div>
-                        <div class="col-md-4 mb-3">
-                          <div class="card">
+                        <div className="col-md-4 mb-3">
+                          <div className="card">
                             <img
                               id={landCSS.card_img}
-                              class="img-fluid"
+                              className="img-fluid"
                               alt="100%x280"
                               src={serrImg}
                             />
-                            <div class="card-body">
+                            <div className="card-body">
                               <p className={landCSS.card_title}>Serralheiro</p>
                               <p>
                                 With supporting text below as a natural lead-in
@@ -189,17 +190,17 @@ function Landing() {
                         </div>
                       </div>
                     </div>
-                    <div class="carousel-item">
-                      <div class="row">
-                        <div class="col-md-4 mb-3">
-                          <div class="card">
+                    <div className="carousel-item">
+                      <div className="row">
+                        <div className="col-md-4 mb-3">
+                          <div className="card">
                             <img
                               id={landCSS.card_img}
-                              class="img-fluid"
+                              className="img-fluid"
                               alt="100%x280"
                               src={jardImg}
                             />
-                            <div class="card-body">
+                            <div className="card-body">
                               <p className={landCSS.card_title}>Jardineiro</p>
                               <p>
                                 With supporting text below as a natural lead-in
@@ -208,15 +209,15 @@ function Landing() {
                             </div>
                           </div>
                         </div>
-                        <div class="col-md-4 mb-3">
-                          <div class="card">
+                        <div className="col-md-4 mb-3">
+                          <div className="card">
                             <img
                               id={landCSS.card_img}
-                              class="img-fluid"
+                              className="img-fluid"
                               alt="100%x280"
                               src={canaImg}
                             />
-                            <div class="card-body">
+                            <div className="card-body">
                               <p className={landCSS.card_title}>Canalizador</p>
                               <p>
                                 With supporting text below as a natural lead-in
@@ -225,15 +226,15 @@ function Landing() {
                             </div>
                           </div>
                         </div>
-                        <div class="col-md-4 mb-3">
-                          <div class="card">
+                        <div className="col-md-4 mb-3">
+                          <div className="card">
                             <img
                               id={landCSS.card_img}
-                              class="img-fluid"
+                              className="img-fluid"
                               alt="100%x280"
                               src={mecImg}
                             />
-                            <div class="card-body">
+                            <div className="card-body">
                               <p className={landCSS.card_title}>Mecanico</p>
                               <p>
                                 With supporting text below as a natural lead-in
@@ -244,17 +245,17 @@ function Landing() {
                         </div>
                       </div>
                     </div>
-                    <div class="carousel-item">
-                      <div class="row">
-                        <div class="col-md-4 mb-3">
-                          <div class="card">
+                    <div className="carousel-item">
+                      <div className="row">
+                        <div className="col-md-4 mb-3">
+                          <div className="card">
                             <img
                               id={landCSS.card_img}
-                              class="img-fluid"
+                              className="img-fluid"
                               alt="100%x280"
                               src={eletImg}
                             />
-                            <div class="card-body">
+                            <div className="card-body">
                               <p className={landCSS.card_title}>Eletricista</p>
                               <p>
                                 With supporting text below as a natural lead-in
@@ -263,16 +264,16 @@ function Landing() {
                             </div>
                           </div>
                         </div>
-                        <div class="col-md-4 mb-3">
-                          <div class="card">
+                        <div className="col-md-4 mb-3">
+                          <div className="card">
                             <img
                               id={landCSS.card_img}
-                              class="img-fluid"
+                              className="img-fluid"
                               alt="100%x280"
                               src={limpImg}
                             />
 
-                            <div class="card-body">
+                            <div className="card-body">
                               <p className={landCSS.card_title}>
                                 Limpeza de pós-obras
                               </p>
@@ -283,15 +284,15 @@ function Landing() {
                             </div>
                           </div>
                         </div>
-                        <div class="col-md-4 mb-3">
-                          <div class="card">
+                        <div className="col-md-4 mb-3">
+                          <div className="card">
                             <img
                               id={landCSS.card_img}
-                              class="img-fluid"
+                              className="img-fluid"
                               alt="100%x280"
                               src={pintorImg}
                             />
-                            <div class="card-body">
+                            <div className="card-body">
                               <p className={landCSS.card_title}>Pintor</p>
                               <p>
                                 With supporting text below as a natural lead-in
@@ -314,55 +315,68 @@ function Landing() {
           <img className={landCSS.imgLoct} src={loct} alt="" />
         </div>
         <div className={landCSS.loctBtn}>
-          <h3>Onde está o Rebotuca</h3>
+          <h3>
+            Onde está situado o <b>Rebotuca</b>?
+          </h3>
+          <br />
           <p className={landCSS.p}>
-            Neste momento so se encontra presente em Viana do Castelo.
+            Neste momento só nos encontramos presentes em{" "}
+            <b>Viana do Castelo</b>.
+          </p>
+          <p className={landCSS.p}>
+            Porém fique atento! Brevemente teremos nossos serviços em todo o
+            país!
           </p>
           <br />
-          <button type="button" class="btn btn-primary">
-            Viana do Castelo
-          </button>
+          <a
+            href="https://www.google.com/maps/place/ESTG+-+Escola+Superior+de+Tecnologia+e+Gest%C3%A3o+%7C+Polit%C3%A9cnico+do+Porto/@41.366853,-8.1969157,17z/data=!3m1!4b1!4m5!3m4!1s0xd24ebb9287835e1:0xca919ba04ec42efc!8m2!3d41.366849!4d-8.194727"
+            className={landCSS.btnLoct}
+          >
+            <button type="button" className="btn btn-primary">
+              Abrir o Maps
+            </button>
+          </a>
         </div>
       </section>
       <div className={landCSS.slideJobs}>
-        <section class="pt-5 pb-5" id={landCSS["sectionSlide"]}>
-          <div class="container">
-            <div class="row">
-              <div class="col-6">
-                <h3 class="mb-3">Serviços mais procurados </h3>
+        <section className="pt-5 pb-5" id={landCSS["sectionSlide"]}>
+          <div className="container">
+            <div className="row">
+              <div className="col-6">
+                <h3 className="mb-3">Serviços mais procurados</h3>
               </div>
-              <div class="col-6 text-right">
+              <div className="col-6 text-right">
                 <a
-                  class="btn btn-primary mb-3 mr-1"
+                  className="btn btn-primary mb-3 mr-1"
                   href="#carousel2"
                   role="button"
                   data-slide="prev"
                 >
-                  <i class="fa fa-arrow-left"></i>
+                  <i className="fa fa-arrow-left"></i>
                 </a>
                 <a
-                  class="btn btn-primary mb-3 "
+                  className="btn btn-primary mb-3 "
                   href="#carousel2"
                   role="button"
                   data-slide="next"
                 >
-                  <i class="fa fa-arrow-right"></i>
+                  <i className="fa fa-arrow-right"></i>
                 </a>
               </div>
-              <div class="col-12">
-                <div id="carousel2" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <div class="row">
-                        <div class="col-md-4 mb-3">
-                          <div class="card">
+              <div className="col-12">
+                <div id="carousel2" className="carousel slide" data-ride="carousel">
+                  <div className="carousel-inner">
+                    <div className="carousel-item active">
+                      <div className="row">
+                        <div className="col-md-4 mb-3">
+                          <div className="card">
                             <img
                               id={landCSS.card_img}
-                              class="img-fluid"
+                              className="img-fluid"
                               alt="100%x280"
                               src={pedrImg}
                             />
-                            <div class="card-body">
+                            <div className="card-body">
                               <p className={landCSS.card_title}>Pedreiro</p>
                               <p>
                                 With supporting text below as a natural lead-in
@@ -371,15 +385,15 @@ function Landing() {
                             </div>
                           </div>
                         </div>
-                        <div class="col-md-4 mb-3">
-                          <div class="card">
+                        <div className="col-md-4 mb-3">
+                          <div className="card">
                             <img
                               id={landCSS.card_img}
-                              class="img-fluid"
+                              className="img-fluid"
                               alt="100%x280"
                               src={carpImg}
                             />
-                            <div class="card-body">
+                            <div className="card-body">
                               <p className={landCSS.card_title}>Carpinteiro</p>
                               <p>
                                 With supporting text below as a natural lead-in
@@ -388,15 +402,15 @@ function Landing() {
                             </div>
                           </div>
                         </div>
-                        <div class="col-md-4 mb-3">
-                          <div class="card">
+                        <div className="col-md-4 mb-3">
+                          <div className="card">
                             <img
                               id={landCSS.card_img}
-                              class="img-fluid"
+                              className="img-fluid"
                               alt="100%x280"
                               src={serrImg}
                             />
-                            <div class="card-body">
+                            <div className="card-body">
                               <p className={landCSS.card_title}>Serralheiro</p>
                               <p>
                                 With supporting text below as a natural lead-in
@@ -407,17 +421,17 @@ function Landing() {
                         </div>
                       </div>
                     </div>
-                    <div class="carousel-item">
-                      <div class="row">
-                        <div class="col-md-4 mb-3">
-                          <div class="card">
+                    <div className="carousel-item">
+                      <div className="row">
+                        <div className="col-md-4 mb-3">
+                          <div className="card">
                             <img
                               id={landCSS.card_img}
-                              class="img-fluid"
+                              className="img-fluid"
                               alt="100%x280"
                               src={jardImg}
                             />
-                            <div class="card-body">
+                            <div className="card-body">
                               <p className={landCSS.card_title}>Jardineiro</p>
                               <p>
                                 With supporting text below as a natural lead-in
@@ -426,15 +440,15 @@ function Landing() {
                             </div>
                           </div>
                         </div>
-                        <div class="col-md-4 mb-3">
-                          <div class="card">
+                        <div className="col-md-4 mb-3">
+                          <div className="card">
                             <img
                               id={landCSS.card_img}
-                              class="img-fluid"
+                              className="img-fluid"
                               alt="100%x280"
                               src={canaImg}
                             />
-                            <div class="card-body">
+                            <div className="card-body">
                               <p className={landCSS.card_title}>Canalizador</p>
                               <p>
                                 With supporting text below as a natural lead-in
@@ -443,15 +457,15 @@ function Landing() {
                             </div>
                           </div>
                         </div>
-                        <div class="col-md-4 mb-3">
-                          <div class="card">
+                        <div className="col-md-4 mb-3">
+                          <div className="card">
                             <img
                               id={landCSS.card_img}
-                              class="img-fluid"
+                              className="img-fluid"
                               alt="100%x280"
                               src={mecImg}
                             />
-                            <div class="card-body">
+                            <div className="card-body">
                               <p className={landCSS.card_title}>Mecanico</p>
                               <p>
                                 With supporting text below as a natural lead-in
@@ -462,17 +476,17 @@ function Landing() {
                         </div>
                       </div>
                     </div>
-                    <div class="carousel-item">
-                      <div class="row">
-                        <div class="col-md-4 mb-3">
-                          <div class="card">
+                    <div className="carousel-item">
+                      <div className="row">
+                        <div className="col-md-4 mb-3">
+                          <div className="card">
                             <img
                               id={landCSS.card_img}
-                              class="img-fluid"
+                              className="img-fluid"
                               alt="100%x280"
                               src={eletImg}
                             />
-                            <div class="card-body">
+                            <div className="card-body">
                               <p className={landCSS.card_title}>Eletricista</p>
                               <p>
                                 With supporting text below as a natural lead-in
@@ -481,16 +495,16 @@ function Landing() {
                             </div>
                           </div>
                         </div>
-                        <div class="col-md-4 mb-3">
-                          <div class="card">
+                        <div className="col-md-4 mb-3">
+                          <div className="card">
                             <img
                               id={landCSS.card_img}
-                              class="img-fluid"
+                              className="img-fluid"
                               alt="100%x280"
                               src={limpImg}
                             />
 
-                            <div class="card-body">
+                            <div className="card-body">
                               <p className={landCSS.card_title}>
                                 Limpeza de pós-obras
                               </p>
@@ -501,15 +515,15 @@ function Landing() {
                             </div>
                           </div>
                         </div>
-                        <div class="col-md-4 mb-3">
-                          <div class="card">
+                        <div className="col-md-4 mb-3">
+                          <div className="card">
                             <img
                               id={landCSS.card_img}
-                              class="img-fluid"
+                              className="img-fluid"
                               alt="100%x280"
                               src={pintorImg}
                             />
-                            <div class="card-body">
+                            <div className="card-body">
                               <p className={landCSS.card_title}>Pintor</p>
                               <p>
                                 With supporting text below as a natural lead-in
@@ -530,10 +544,10 @@ function Landing() {
 
       <div className={landCSS.tabViewBox}>
         <div className={landCSS.tabView}>
-          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
+          <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li className="nav-item" role="presentation">
               <button
-                class="nav-link active"
+                className="nav-link active"
                 id="pills-home-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#pills-home"
@@ -545,9 +559,9 @@ function Landing() {
                 Dê vida ao seu projeto
               </button>
             </li>
-            <li class="nav-item" role="presentation">
+            <li className="nav-item" role="presentation">
               <button
-                class="nav-link"
+                className="nav-link"
                 id="pills-profile-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#pills-profile"
@@ -559,9 +573,9 @@ function Landing() {
                 Como funciona
               </button>
             </li>
-            <li class="nav-item" role="presentation">
+            <li className="nav-item" role="presentation">
               <button
-                class="nav-link"
+                className="nav-link"
                 id="pills-contact-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#pills-contact"
@@ -574,9 +588,9 @@ function Landing() {
               </button>
             </li>
           </ul>
-          <div class="tab-content" id="pills-tabContent">
+          <div className="tab-content" id="pills-tabContent">
             <div
-              class="tab-pane fade show active"
+              className="tab-pane fade show active"
               id="pills-home"
               role="tabpanel"
               aria-labelledby="pills-home-tab"
@@ -588,7 +602,7 @@ function Landing() {
               profissional da area.
             </div>
             <div
-              class="tab-pane fade"
+              className="tab-pane fade"
               id="pills-profile"
               role="tabpanel"
               aria-labelledby="pills-profile-tab"
@@ -600,7 +614,7 @@ function Landing() {
               trabalhar na are aque mais gosta.
             </div>
             <div
-              class="tab-pane fade"
+              className="tab-pane fade"
               id="pills-contact"
               role="tabpanel"
               aria-labelledby="pills-contact-tab"

@@ -39,7 +39,7 @@ function Image() {
       <form onSubmit={formHandler}>
         <input type="file" className="input" />
 
-        <button type="submit" class="btn btn-secondary">
+        <button type="submit" className="btn btn-secondary">
           Upload
         </button>
       </form>
