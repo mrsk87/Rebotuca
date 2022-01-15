@@ -15,9 +15,13 @@ import electImg from "../assets/img/electricista.jpg";
 import serrImg from "../assets/img/serralheiro.jpg";
 import limpImg from "../assets/img/limp.png";
 
-import Modal from "./ModalProject";
-import useModal from "./useModal";
 import Navbar from "./Navbar";
+
+import Cards from "./Cards";
+
+import useModal from "./useModal";
+import Modal from "./ModalProject";
+
 import Footer from "./Footer";
 
 function Projects() {
@@ -25,6 +29,8 @@ function Projects() {
   //https://upmostly.com/tutorials/modal-components-react-custom-hooks
   const navigate = useNavigate();
   const [user, loading] = useAuthState(auth);
+  const [projects, setProjects] = useState([]);
+
   const [uid, setUid] = useState("");
 
   const fetchUser = async () => {
@@ -45,8 +51,12 @@ function Projects() {
       const q = query(collection(db, "jobs"), where("uid", "==", user?.uid));
       const querySnapshot = await getDocs(q);
 
-      const data = querySnapshot.docs[0].data();
-      console.log(data);
+      let projects = [];
+      querySnapshot.docs.map(function (doc) {
+        projects.push(doc.data());
+      });
+      setProjects(projects);
+      //
     } catch (err) {
       console.error(err);
       alert("An error occured while fetching user data");
@@ -62,12 +72,11 @@ function Projects() {
   }, [user, loading]);
 
   const { isShowing, toggle } = useModal();
-  return (
-    <>
-      <Navbar />
-      <section className={dashCSS.projectos}>
-        <h1>Projetos</h1>
-        <div className={dashCSS.crieProjectos}>
+
+  function Projects() {
+    if (projects.length == 0) {
+      return (
+        <>
           <div className={dashCSS.iconProjecto}>
             <img alt="100%x280" src={sketch} />
             <br />
@@ -85,6 +94,20 @@ function Projects() {
               <Modal isShowing={isShowing} hide={toggle} uid={uid} />
             </div>
           </div>
+        </>
+      );
+    } else {
+      return <Cards projects={projects} uid={uid} />;
+    }
+  }
+
+  return (
+    <>
+      <Navbar />
+      <section className={dashCSS.projectos}>
+        <h1>Projetos</h1>
+        <div className={dashCSS.crieProjectos}>
+          <Projects project={false} />
         </div>
       </section>
       <section className={dashCSS.cards}>
