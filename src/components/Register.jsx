@@ -76,7 +76,12 @@ function Register() {
                   className={authCSS.input_submit}
                   value="Register"
                 ></input>
-                <button onClick={register}>Register</button>
+                <button onClick={register}></button>
+
+                <i
+                  style={{ marginLeft: "40px" }}
+                  className={cx("ion-logo-google", authCSS.ion_logo_google)}
+                ></i>
                 <button onClick={signInWithGoogle}>Register with Google</button>
               </form>
             </div>
