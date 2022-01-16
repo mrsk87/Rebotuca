@@ -77,9 +77,13 @@ function Register() {
                   value="Register"
                 ></input>
                 <button onClick={register}></button>
-
+                <br />
+                <div className={authCSS.striped}>
+                  <span className={authCSS.striped_line}></span>
+                  <span className={authCSS.striped_text}>ou</span>
+                  <span className={authCSS.striped_line}></span>
+                </div>
                 <i
-                  style={{ marginLeft: "40px" }}
                   className={cx("ion-logo-google", authCSS.ion_logo_google)}
                 ></i>
                 <button onClick={signInWithGoogle}>Register with Google</button>
